@@ -142,7 +142,7 @@ const HotelLoginPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white text-[#003836] flex flex-col font-sans selection:bg-[#0F172A] selection:text-white">
+        <div className="min-h-screen bg-white text-[#2B2620] flex flex-col font-sans selection:bg-[#2B2620] selection:text-white">
 
             {/* Top Bar - Centered Logo */}
             <header className="px-6 pt-0 pb-2 flex justify-center items-center">
@@ -159,7 +159,7 @@ const HotelLoginPage = () => {
                     animate={{ opacity: 1, y: 0 }}
                     className="mb-8 text-center space-y-1"
                 >
-                    <h1 className="text-xl font-bold text-[#003836]">Partner Login</h1>
+                    <h1 className="text-xl font-bold text-[#2B2620]">Partner Login</h1>
                     <p className="text-gray-400 text-xs font-medium">Log in to manage your property</p>
                 </motion.div>
 
@@ -176,10 +176,10 @@ const HotelLoginPage = () => {
                             <form onSubmit={handleSendOTP} className="space-y-5">
 
                                 <div>
-                                    <label className="text-[#003836] font-bold text-[10px] uppercase tracking-wider block mb-1.5 ml-1">
+                                    <label className="text-[#2B2620] font-bold text-[10px] uppercase tracking-wider block mb-1.5 ml-1">
                                         Mobile Number
                                     </label>
-                                    <div className="flex items-center bg-gray-50/50 rounded-xl border border-gray-200 overflow-hidden focus-within:ring-2 focus-within:ring-[#0F172A]/10 focus-within:border-[#0F172A] transition-all h-12">
+                                    <div className="flex items-center bg-gray-50/50 rounded-xl border border-gray-200 overflow-hidden focus-within:ring-2 focus-within:ring-[#2B2620]/10 focus-within:border-[#2B2620] transition-all h-12">
                                         <div className="pl-4 text-gray-500 font-bold border-r border-gray-100 pr-3 h-full flex items-center bg-gray-100/30">
                                             <span className="text-xs">+91</span>
                                         </div>
@@ -191,7 +191,7 @@ const HotelLoginPage = () => {
                                                 if (val.length <= 10) setPhone(val);
                                             }}
                                             placeholder="Enter 10-digit number"
-                                            className="flex-1 bg-transparent px-3 text-[#003836] font-bold placeholder:text-gray-300 outline-none w-full h-full text-sm"
+                                            className="flex-1 bg-transparent px-3 text-[#2B2620] font-bold placeholder:text-gray-300 outline-none w-full h-full text-sm"
                                             required
                                         />
                                     </div>
@@ -207,7 +207,7 @@ const HotelLoginPage = () => {
                                     <button
                                         type="submit"
                                         disabled={loading}
-                                        className="w-full bg-[#0F172A] text-white h-12 rounded-xl font-bold text-sm shadow-lg shadow-[#0F172A]/20 hover:shadow-[#0F172A]/30 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                                        className="w-full bg-[#2B2620] text-white h-12 rounded-xl font-bold text-sm shadow-lg shadow-[#2B2620]/20 hover:shadow-[#2B2620]/30 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                                     >
                                         {loading ? (
                                             <Loader2 size={18} className="animate-spin" />
@@ -229,12 +229,12 @@ const HotelLoginPage = () => {
                             className="w-full"
                         >
                             <div className="mb-6 bg-green-50/50 p-4 rounded-2xl border border-green-100 text-center">
-                                <div className="w-10 h-10 bg-[#0F172A]/10 rounded-full flex items-center justify-center mx-auto mb-2">
-                                    <Shield size={20} className="text-[#0F172A]" />
+                                <div className="w-10 h-10 bg-[#2B2620]/10 rounded-full flex items-center justify-center mx-auto mb-2">
+                                    <Shield size={20} className="text-[#2B2620]" />
                                 </div>
-                                <h2 className="text-base font-bold text-[#003836]">Enter OTP</h2>
+                                <h2 className="text-base font-bold text-[#2B2620]">Enter OTP</h2>
                                 <p className="text-gray-500 text-xs mt-1">
-                                    Code sent to <span className="text-[#003836] font-bold">+91 {phone}</span>
+                                    Code sent to <span className="text-[#2B2620] font-bold">+91 {phone}</span>
                                 </p>
                             </div>
 
@@ -254,7 +254,7 @@ const HotelLoginPage = () => {
                                                     document.getElementById(`otp-${index - 1}`)?.focus();
                                                 }
                                             }}
-                                            className="w-10 h-12 bg-white border-2 border-gray-400 rounded-xl text-center text-[#003836] text-xl font-bold focus:border-[#0F172A] focus:ring-2 focus:ring-[#0F172A]/10 outline-none transition-all shadow-sm"
+                                            className="w-10 h-12 bg-white border-2 border-gray-400 rounded-xl text-center text-[#2B2620] text-xl font-bold focus:border-[#2B2620] focus:ring-2 focus:ring-[#2B2620]/10 outline-none transition-all shadow-sm"
                                             autoFocus={index === 0}
                                         />
                                     ))}
@@ -267,7 +267,7 @@ const HotelLoginPage = () => {
                                             <button
                                                 type="button"
                                                 onClick={handleResendOTP}
-                                                className="text-[#0F172A] hover:underline"
+                                                className="text-[#2B2620] hover:underline"
                                             >
                                                 Resend OTP
                                             </button>
@@ -275,7 +275,7 @@ const HotelLoginPage = () => {
                                     ) : (
                                         <p className="text-gray-400 text-xs font-bold">
                                             Resend OTP in{' '}
-                                            <span className="text-[#0F172A] tabular-nums">
+                                            <span className="text-[#2B2620] tabular-nums">
                                                 {Math.floor(resendTimer / 60)}:{String(resendTimer % 60).padStart(2, '0')}
                                             </span>
                                         </p>
@@ -292,7 +292,7 @@ const HotelLoginPage = () => {
                                     <button
                                         type="submit"
                                         disabled={loading}
-                                        className="w-full bg-[#0F172A] text-white h-12 rounded-xl font-bold text-sm shadow-lg shadow-[#0F172A]/20 hover:shadow-[#0F172A]/30 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+                                        className="w-full bg-[#2B2620] text-white h-12 rounded-xl font-bold text-sm shadow-lg shadow-[#2B2620]/20 hover:shadow-[#2B2620]/30 active:scale-[0.98] transition-all disabled:opacity-50 flex items-center justify-center gap-2"
                                     >
                                         {loading ? (
                                             <Loader2 size={18} className="animate-spin" />
@@ -307,7 +307,7 @@ const HotelLoginPage = () => {
                                             setStep(1);
                                             setOtp(['', '', '', '']);
                                         }}
-                                        className="w-full text-gray-400 text-xs font-bold hover:text-[#0F172A] transition-colors"
+                                        className="w-full text-gray-400 text-xs font-bold hover:text-[#2B2620] transition-colors"
                                     >
                                         Change Mobile Number
                                     </button>
@@ -327,16 +327,16 @@ const HotelLoginPage = () => {
                             clearPropertyDrafts();
                             navigate('/hotel/register');
                         }}
-                        className="text-[#0F172A] font-bold hover:underline"
+                        className="text-[#2B2620] font-bold hover:underline"
                     >
                         Register as a partner
                     </button>
                 </p>
                 <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2">
-                    <button onClick={() => navigate('/hotel/terms')} className="text-xs text-gray-400 font-medium hover:text-[#0F172A] transition-colors">
+                    <button onClick={() => navigate('/hotel/terms')} className="text-xs text-gray-400 font-medium hover:text-[#2B2620] transition-colors">
                         Terms & Conditions
                     </button>
-                    <button onClick={() => navigate('/hotel/privacy')} className="text-xs text-gray-400 font-medium hover:text-[#0F172A] transition-colors">
+                    <button onClick={() => navigate('/hotel/privacy')} className="text-xs text-gray-400 font-medium hover:text-[#2B2620] transition-colors">
                         Privacy Policy
                     </button>
                 </div>

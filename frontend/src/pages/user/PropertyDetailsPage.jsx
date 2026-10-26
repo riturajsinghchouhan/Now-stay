@@ -712,7 +712,7 @@ const PropertyDetailsPage = () => {
   };
 
   return (
-    <div className="bg-emerald-100 min-h-screen pb-24">
+    <div className="bg-background min-h-screen pb-24">
       {/* Header Image */}
       <div className="relative h-[40vh] md:h-[50vh] cursor-zoom-in group">
         <motion.div
@@ -829,12 +829,12 @@ const PropertyDetailsPage = () => {
                   </span>
                 )}
                 {(config?.starRating || property?.starRating) && (
-                  <span className="bg-amber-500/10 text-amber-700 border border-amber-300/60 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1 shadow-2xs">
+                  <span className="bg-emerald-500/10 text-emerald-700 border border-emerald-300/60 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1 shadow-2xs">
                     ★ {config?.starRating || property?.starRating} Star {propertyType}
                   </span>
                 )}
                 {property?.subCategories && Array.isArray(property.subCategories) && property.subCategories.length > 0 && property.subCategories.map((sub, idx) => (
-                  <span key={`sub-${idx}`} className="bg-indigo-50 text-indigo-700 border border-indigo-200 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1">
+                  <span key={`sub-${idx}`} className="bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider flex items-center gap-1">
                     🏷️ {sub}
                   </span>
                 ))}
@@ -918,9 +918,9 @@ const PropertyDetailsPage = () => {
           {/* Type Specific Info - Dynamic Rendering */}
           {pTemplate === 'pg' && config && (
             <div className="mb-8 grid md:grid-cols-2 gap-4">
-              <div className="p-4 bg-yellow-50 rounded-xl">
-                <h3 className="font-bold text-yellow-900 mb-2">PG Details</h3>
-                <ul className="text-sm text-yellow-800 space-y-1">
+              <div className="p-4 bg-emerald-50 rounded-xl">
+                <h3 className="font-bold text-emerald-900 mb-2">PG Details</h3>
+                <ul className="text-sm text-emerald-800 space-y-1">
                   <li>Type: {config.pgType}</li>
                   <li>Food: {config.mealsIncluded === 'Yes' ? `Included (${config.foodType})` : 'Not Included'}</li>
                   <li>Notice Period: {config.noticePeriod}</li>
@@ -933,9 +933,9 @@ const PropertyDetailsPage = () => {
 
           {pTemplate === 'hotel' && config && (config.hotelCategory || config.starRating) && (
             <div className="mb-8 grid md:grid-cols-2 gap-4">
-              <div className="p-4 bg-blue-50 rounded-xl">
-                <h3 className="font-bold text-blue-900 mb-2">Hotel Info</h3>
-                <ul className="text-sm text-blue-800 space-y-1">
+              <div className="p-4 bg-emerald-50 rounded-xl">
+                <h3 className="font-bold text-emerald-900 mb-2">Hotel Info</h3>
+                <ul className="text-sm text-emerald-800 space-y-1">
                   {config.hotelCategory && <li>Category: {config.hotelCategory}</li>}
                   {property.subCategories?.length > 0 && <li>Sub Categories: {property.subCategories.join(', ')}</li>}
                   {(config.starRating || property.starRating) && <li>Star Category: ★ {config.starRating || property.starRating} Star Hotel</li>}
@@ -1005,11 +1005,11 @@ const PropertyDetailsPage = () => {
                   </ul>
                 </div>
                 {property.mealPlans && property.mealPlans.length > 0 && (
-                  <div className="p-4 bg-orange-50 rounded-xl">
-                    <h3 className="font-bold text-orange-900 mb-2">Meal Plans</h3>
+                  <div className="p-4 bg-emerald-50 rounded-xl">
+                    <h3 className="font-bold text-emerald-900 mb-2">Meal Plans</h3>
                     <div className="flex flex-wrap gap-2">
                       {property.mealPlans.map((plan, i) => (
-                        <span key={i} className="text-xs bg-orange-100 text-orange-800 px-2 py-1 rounded-full">
+                        <span key={i} className="text-xs bg-emerald-100 text-emerald-800 px-2 py-1 rounded-full">
                           {plan.mealType}
                         </span>
                       ))}
@@ -1018,11 +1018,11 @@ const PropertyDetailsPage = () => {
                 )}
               </div>
               {property.activities && property.activities.filter(a => a && (typeof a === 'string' ? a.trim() : a.name)).length > 0 && (
-                <div className="p-4 bg-indigo-50 rounded-xl">
-                  <h3 className="font-bold text-indigo-900 mb-2">Activities</h3>
+                <div className="p-4 bg-emerald-50 rounded-xl">
+                  <h3 className="font-bold text-emerald-900 mb-2">Activities</h3>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                     {property.activities.filter(a => a && (typeof a === 'string' ? a.trim() : a.name)).map((act, i) => (
-                      <div key={i} className="text-sm text-indigo-800">
+                      <div key={i} className="text-sm text-emerald-800">
                         {typeof act === 'string' ? (
                           <span className="font-semibold">{act}</span>
                         ) : (
@@ -1041,9 +1041,9 @@ const PropertyDetailsPage = () => {
 
           {pTemplate === 'homestay' && config && (
             <div className="mb-8 grid md:grid-cols-2 gap-4">
-              <div className="p-4 bg-amber-50 rounded-xl">
-                <h3 className="font-bold text-amber-900 mb-2">Homestay Experience</h3>
-                <ul className="text-sm text-amber-800 space-y-1">
+              <div className="p-4 bg-emerald-50 rounded-xl">
+                <h3 className="font-bold text-emerald-900 mb-2">Homestay Experience</h3>
+                <ul className="text-sm text-emerald-800 space-y-1">
                   {property.hostName && <li>Host: {property.hostName}</li>}
                   <li>Food: {config.foodType} ({config.mealsAvailable === 'Yes' ? 'Available' : 'Not Available'})</li>
                   <li>Shared Areas: {config.sharedAreas ? 'Yes' : 'No'}</li>
@@ -1056,9 +1056,9 @@ const PropertyDetailsPage = () => {
 
           {pTemplate === 'hostel' && config && (
             <div className="mb-8 grid md:grid-cols-2 gap-4">
-              <div className="p-4 bg-purple-50 rounded-xl">
-                <h3 className="font-bold text-purple-900 mb-2">Hostel Info</h3>
-                <ul className="text-sm text-purple-800 space-y-1">
+              <div className="p-4 bg-emerald-50 rounded-xl">
+                <h3 className="font-bold text-emerald-900 mb-2">Hostel Info</h3>
+                <ul className="text-sm text-emerald-800 space-y-1">
                   <li>Type: {config.hostelType}</li>
                   <li>Curfew: {config.curfewTime || 'No Curfew'}</li>
                   <li>Age Restriction: {config.ageRestriction ? 'Yes' : 'No'}</li>
@@ -1215,7 +1215,7 @@ const PropertyDetailsPage = () => {
                     <label className="text-sm font-bold text-gray-800 block">Adults</label>
                     <p className="text-[10px] text-gray-500">Ages 12+</p>
                     {guests.adults > baseAdultsPerUnit * guests.rooms && (
-                      <span className="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded-md mt-1 inline-block border border-orange-100 animate-pulse">
+                      <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md mt-1 inline-block border border-emerald-100 animate-pulse">
                         ₹{selectedRoom?.pricing?.extraAdultPrice || 0} Extra charge
                       </span>
                     )}
@@ -1245,7 +1245,7 @@ const PropertyDetailsPage = () => {
                       <label className="text-sm font-bold text-gray-800 block">Children</label>
                       <p className="text-[10px] text-gray-500">Ages 0-11</p>
                       {guests.children > baseChildrenPerUnit * guests.rooms && (
-                        <span className="text-[10px] font-bold text-orange-600 bg-orange-50 px-2 py-0.5 rounded-md mt-1 inline-block border border-orange-100 animate-pulse">
+                        <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md mt-1 inline-block border border-emerald-100 animate-pulse">
                           ₹{selectedRoom?.pricing?.extraChildPrice || 0} Extra charge
                         </span>
                       )}
@@ -1351,13 +1351,13 @@ const PropertyDetailsPage = () => {
                     </div>
                   )}
                   {priceBreakdown.totalExtraAdultCharge > 0 && (
-                    <div className="flex justify-between text-orange-700">
+                    <div className="flex justify-between text-emerald-700">
                       <span>Extra Adults ({priceBreakdown.extraAdultsCount} x ₹{priceBreakdown.extraAdultPrice}/night)</span>
                       <span>+ ₹{priceBreakdown.totalExtraAdultCharge.toLocaleString()}</span>
                     </div>
                   )}
                   {priceBreakdown.totalExtraChildCharge > 0 && (
-                    <div className="flex justify-between text-orange-700">
+                    <div className="flex justify-between text-emerald-700">
                       <span>Extra Children ({priceBreakdown.extraChildrenCount} x ₹{priceBreakdown.extraChildPrice}/night)</span>
                       <span>+ ₹{priceBreakdown.totalExtraChildCharge.toLocaleString()}</span>
                     </div>
@@ -1395,7 +1395,7 @@ const PropertyDetailsPage = () => {
             )}
 
             {/* Note about limits */}
-            <div className="mt-3 bg-blue-50 text-blue-800 text-xs p-3 rounded-lg flex items-start gap-2">
+            <div className="mt-3 bg-emerald-50 text-emerald-800 text-xs p-3 rounded-lg flex items-start gap-2">
               <Info size={14} className="mt-0.5 shrink-0" />
               <p>
                 Max allowed: <strong>{getMaxAdults()} Adults</strong> and <strong>{getMaxChildren()} Children</strong> for current selection.
@@ -1561,7 +1561,7 @@ const PropertyDetailsPage = () => {
                       >
                         <Star
                           size={24}
-                          className={`${reviewData.rating >= star ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'} transition-colors`}
+                          className={`${reviewData.rating >= star ? 'fill-yellow-400 text-emerald-400' : 'text-gray-300'} transition-colors`}
                         />
                       </button>
                     ))}
@@ -1612,8 +1612,8 @@ const PropertyDetailsPage = () => {
                         <p className="font-bold text-gray-800 text-sm line-clamp-1">{review.userId?.name || 'User'}</p>
                         <p className="text-xs text-gray-400">{new Date(review.createdAt).toLocaleDateString()}</p>
                       </div>
-                      <div className="ml-auto flex items-center gap-1 bg-yellow-50 text-yellow-700 px-2 py-0.5 rounded text-xs font-bold">
-                        {review.rating} <Star size={10} className="fill-yellow-500 text-yellow-500" />
+                      <div className="ml-auto flex items-center gap-1 bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded text-xs font-bold">
+                        {review.rating} <Star size={10} className="fill-yellow-500 text-emerald-500" />
                       </div>
                     </div>
                     <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
@@ -1630,32 +1630,32 @@ const PropertyDetailsPage = () => {
       </div>
 
       {/* Sticky Bottom Booking Bar */}
-      <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 py-3 px-4 shadow-lg z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-teal-700 rounded-t-[26px] py-3.5 px-5 shadow-[0_-10px_30px_-10px_rgba(43,38,32,0.45)] z-50">
         <div className="max-w-5xl mx-auto flex items-center justify-between gap-4">
           <div>
-            <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">{priceBreakdown ? 'Total Amount' : 'Per Night'}</p>
-            <p className="font-bold text-xl text-surface leading-tight">
+            <p className="text-[10px] text-white/70 font-bold uppercase tracking-wider">{priceBreakdown ? 'Total (INR)' : 'Per Night'}</p>
+            <p className="font-sans font-extrabold text-2xl text-white leading-tight">
               ₹{priceBreakdown?.grandTotal?.toLocaleString() || bookingBarPrice?.toLocaleString() || 'N/A'}
             </p>
             {dates.checkIn && dates.checkOut && (
               <div className="mt-0.5">
                 {checkingAvailability ? (
-                  <span className="text-[10px] text-blue-500 flex items-center gap-1">
+                  <span className="text-[10px] text-white/80 flex items-center gap-1">
                     <Loader2 size={10} className="animate-spin" /> Checking...
                   </span>
                 ) : availability?.available === false ? (
-                  <span className="text-[10px] text-red-500 font-bold flex items-center gap-1">
+                  <span className="text-[10px] text-red-200 font-bold flex items-center gap-1">
                     <Info size={10} /> {availability.message || "Not Available"}
                   </span>
                 ) : availability?.available === true ? (
-                  <span className="text-[10px] text-green-600 font-bold flex items-center gap-1">
+                  <span className="text-[10px] text-emerald-200 font-bold flex items-center gap-1">
                     <CheckCircle size={10} /> {availability.unitsLeft !== undefined ? `${availability.unitsLeft} Left!` : 'Available'}
                   </span>
                 ) : null}
               </div>
             )}
             {extraPricingLabels.length > 0 && (
-              <p className="text-[9px] text-gray-400 font-medium leading-tight">
+              <p className="text-[9px] text-white/60 font-medium leading-tight">
                 {extraPricingLabels.join(' • ')}
               </p>
             )}
@@ -1664,7 +1664,7 @@ const PropertyDetailsPage = () => {
             <button
               onClick={handleBook}
               disabled={bookingLoading || checkingAvailability}
-              className="bg-surface text-white px-6 py-1.5 rounded-lg font-black text-sm flex-1 md:w-44 disabled:opacity-70 disabled:cursor-not-allowed hover:bg-surface-dark shadow-md shadow-surface/20 transition-all active:scale-[0.96] flex flex-col items-center justify-center leading-none min-h-[44px]"
+              className="bg-gradient-to-br from-emerald-400 to-emerald-700 text-white px-6 py-2 rounded-2xl font-bold text-sm flex-1 md:w-52 disabled:opacity-70 disabled:cursor-not-allowed hover:brightness-105 shadow-lg shadow-black/20 transition-all active:scale-[0.96] flex items-center justify-center gap-2 leading-none min-h-[50px] whitespace-nowrap"
             >
               {(bookingLoading || checkingAvailability) ? (
                 <>
@@ -1673,8 +1673,7 @@ const PropertyDetailsPage = () => {
                 </>
               ) : (
                 <>
-                  <span className="block">Book</span>
-                  <span className="block mt-0.5">Now</span>
+                  <span>Book Securely</span>
                 </>
               )}
             </button>

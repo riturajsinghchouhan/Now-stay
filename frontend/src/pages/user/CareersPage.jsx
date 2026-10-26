@@ -1,30 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Briefcase } from 'lucide-react';
-import { legalService } from '../../services/apiService';
 
 const CareersPage = () => {
     const navigate = useNavigate();
-    const [pageData, setPageData] = useState(null);
+    const pageData = null;
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
 
+    // Careers has no CMS entry on the backend (info pages only support terms/privacy/about/contact/cancellation),
+    // so show the static fallback instead of firing a request that always returns 400.
     useEffect(() => {
-        let isMounted = true;
-        const loadData = async () => {
-            try {
-                const res = await legalService.getPage('user', 'careers');
-                if (isMounted && res.success) {
-                    setPageData(res.page);
-                }
-            } catch (e) {
-                if (isMounted) setError('Unable to load Careers information.');
-            } finally {
-                if (isMounted) setLoading(false);
-            }
-        };
-        loadData();
-        return () => { isMounted = false; };
+        setLoading(false);
+        setError('static');
     }, []);
 
     const renderContent = (content) => {

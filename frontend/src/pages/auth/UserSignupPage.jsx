@@ -287,7 +287,7 @@ const UserSignupPage = () => {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full bg-[#009688] hover:bg-[#00796B] text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-500/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
+                                    className="w-full bg-[#B8893C] hover:bg-[#96702E] text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-500/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {loading ? (
                                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -350,7 +350,7 @@ const UserSignupPage = () => {
                                 <button
                                     type="submit"
                                     disabled={loading}
-                                    className="w-full bg-[#009688] hover:bg-[#00796B] text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-500/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
+                                    className="w-full bg-[#B8893C] hover:bg-[#96702E] text-white font-bold py-4 rounded-xl shadow-lg shadow-teal-500/30 flex items-center justify-center gap-2 transition-all active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                                 >
                                     {loading ? (
                                         <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />

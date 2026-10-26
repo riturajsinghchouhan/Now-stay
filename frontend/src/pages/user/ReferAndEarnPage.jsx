@@ -113,7 +113,7 @@ Download the app: ${APP_LINK}`)}`;
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-b from-surface via-surface to-[#003836]">
+        <div className="min-h-screen bg-gradient-to-b from-surface via-surface to-[#2B2620]">
 
             {/* Header */}
             <div className="sticky top-0 z-20 bg-surface/95 backdrop-blur-lg border-b border-white/10">
@@ -144,7 +144,7 @@ Download the app: ${APP_LINK}`)}`;
                     initial={{ scale: 0, rotate: -180 }}
                     animate={{ scale: 1, rotate: 0 }}
                     transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                    className="relative z-10 w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-honey to-orange-400 rounded-3xl flex items-center justify-center shadow-2xl shadow-honey/30"
+                    className="relative z-10 w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-honey to-emerald-400 rounded-3xl flex items-center justify-center shadow-2xl shadow-honey/30"
                 >
                     <Gift size={48} className="text-white" />
                     <motion.div
@@ -332,7 +332,7 @@ Download the app: ${APP_LINK}`)}`;
                                 className="space-y-5"
                             >
                                 {/* Total Earnings Card */}
-                                <div className="bg-gradient-to-br from-surface to-[#003836] rounded-2xl p-6 shadow-xl relative overflow-hidden">
+                                <div className="bg-gradient-to-br from-surface to-[#2B2620] rounded-2xl p-6 shadow-xl relative overflow-hidden">
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -mr-10 -mt-10 blur-xl" />
                                     <div className="relative z-10">
                                         <p className="text-sm text-white/70 font-medium mb-1">Total Earnings</p>
@@ -368,14 +368,14 @@ Download the app: ${APP_LINK}`)}`;
                                             <span className="font-bold text-green-600">₹{referralData.earnings.total}</span>
                                         </div>
 
-                                        <div className="flex justify-between items-center p-3 bg-yellow-50 rounded-xl">
+                                        <div className="flex justify-between items-center p-3 bg-emerald-50 rounded-xl">
                                             <div className="flex items-center gap-3">
-                                                <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center">
-                                                    <Clock size={16} className="text-yellow-600" />
+                                                <div className="w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center">
+                                                    <Clock size={16} className="text-emerald-600" />
                                                 </div>
                                                 <span className="text-sm font-medium text-gray-700">Pending Referrals</span>
                                             </div>
-                                            <span className="font-bold text-yellow-600">₹{referralData.earnings.pending}</span>
+                                            <span className="font-bold text-emerald-600">₹{referralData.earnings.pending}</span>
                                         </div>
                                     </div>
                                 </div>
@@ -409,12 +409,12 @@ Download the app: ${APP_LINK}`)}`;
                                             <p className="text-xs text-gray-400">{new Date(item.date).toLocaleDateString()}</p>
                                         </div>
                                         <div className="text-right">
-                                            <p className={`font-bold text-sm ${item.status === 'completed' ? 'text-green-600' : 'text-yellow-600'}`}>
+                                            <p className={`font-bold text-sm ${item.status === 'completed' ? 'text-green-600' : 'text-emerald-600'}`}>
                                                 +₹{item.reward}
                                             </p>
                                             <span className={`text-[10px] font-bold uppercase ${item.status === 'completed'
                                                 ? 'text-green-600 bg-green-50'
-                                                : 'text-yellow-600 bg-yellow-50'
+                                                : 'text-emerald-600 bg-emerald-50'
                                                 } px-2 py-0.5 rounded-full`}>
                                                 {item.status}
                                             </span>

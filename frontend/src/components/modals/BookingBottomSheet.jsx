@@ -394,8 +394,8 @@ const BookingBottomSheet = ({ isOpen, onClose, hotelData, initialBookingData }) 
                                             </div>
                                         </div>
 
-                                        <div className="mt-6 p-4 bg-blue-50 rounded-xl border border-blue-100">
-                                            <p className="text-xs text-blue-700">
+                                        <div className="mt-6 p-4 bg-emerald-50 rounded-xl border border-emerald-100">
+                                            <p className="text-xs text-emerald-700">
                                                 💡 <strong>Tip:</strong> Children below 5 years stay free with existing bedding.
                                             </p>
                                         </div>

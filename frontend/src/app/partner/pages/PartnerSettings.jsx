@@ -19,7 +19,7 @@ const SettingItem = ({ icon: Icon, label, type = "toggle", value, onChange }) =>
         {type === "toggle" && (
             <button
                 onClick={() => onChange(!value)}
-                className={`w-10 h-6 rounded-full p-1 transition-colors ${value ? 'bg-[#0F172A]' : 'bg-gray-200'}`}
+                className={`w-10 h-6 rounded-full p-1 transition-colors ${value ? 'bg-[#2B2620]' : 'bg-gray-200'}`}
             >
                 <div className={`w-4 h-4 bg-white rounded-full transition-transform ${value ? 'translate-x-4' : 'translate-x-0'}`}></div>
             </button>
@@ -234,7 +234,7 @@ const PartnerSettings = () => {
                                     <div className="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mb-6 border-2 border-red-100/50">
                                         <AlertTriangle size={36} className="text-red-500" />
                                     </div>
-                                    <h3 className="text-2xl font-black text-[#003836] mb-2 uppercase tracking-tight">
+                                    <h3 className="text-2xl font-black text-[#2B2620] mb-2 uppercase tracking-tight">
                                         {showOtpStep ? 'Verify OTP' : 'Delete Account?'}
                                     </h3>
 
@@ -249,7 +249,7 @@ const PartnerSettings = () => {
                                                     value={deletionReason}
                                                     onChange={(e) => setDeletionReason(e.target.value)}
                                                     placeholder="Tell us why you want to delete your account..."
-                                                    className="w-full p-4 rounded-2xl bg-gray-50 border border-gray-100 text-sm font-bold text-[#003836] focus:outline-none focus:ring-4 focus:ring-red-500/10 focus:border-red-500/30 transition-all resize-none h-24"
+                                                    className="w-full p-4 rounded-2xl bg-gray-50 border border-gray-100 text-sm font-bold text-[#2B2620] focus:outline-none focus:ring-4 focus:ring-red-500/10 focus:border-red-500/30 transition-all resize-none h-24"
                                                 />
                                             </div>
                                             <div className="flex flex-col w-full gap-3">
@@ -272,7 +272,7 @@ const PartnerSettings = () => {
                                     ) : (
                                         <>
                                             <p className="text-sm font-medium text-gray-500 leading-relaxed mb-6">
-                                                Please enter the verification OTP sent to your registered email: <span className="font-bold text-[#0F172A]">{user.email}</span>
+                                                Please enter the verification OTP sent to your registered email: <span className="font-bold text-[#2B2620]">{user.email}</span>
                                             </p>
                                             <div className="w-full mb-8">
                                                 <input
@@ -281,14 +281,14 @@ const PartnerSettings = () => {
                                                     value={deletionOtp}
                                                     onChange={(e) => setDeletionOtp(e.target.value.replace(/\D/g, ''))}
                                                     placeholder="0000"
-                                                    className="w-full text-center text-3xl font-black tracking-[0.5em] p-4 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#0F172A]/5 focus:border-[#0F172A]/20 transition-all"
+                                                    className="w-full text-center text-3xl font-black tracking-[0.5em] p-4 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#2B2620]/5 focus:border-[#2B2620]/20 transition-all"
                                                 />
                                             </div>
                                             <div className="flex flex-col w-full gap-3">
                                                 <button
                                                     onClick={handleVerifyDeletion}
                                                     disabled={deleteLoading}
-                                                    className="w-full bg-[#0F172A] text-white font-black py-4.5 rounded-[1.5rem] shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 text-sm uppercase tracking-widest"
+                                                    className="w-full bg-[#2B2620] text-white font-black py-4.5 rounded-[1.5rem] shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 text-sm uppercase tracking-widest"
                                                 >
                                                     {deleteLoading ? <Loader2 size={18} className="animate-spin" /> : 'Permanently Delete'}
                                                 </button>

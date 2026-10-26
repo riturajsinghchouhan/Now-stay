@@ -190,7 +190,7 @@ const AdminAppLinks = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
-            <Smartphone className="text-[#0F172A]" size={28} />
+            <Smartphone className="text-[#2B2620]" size={28} />
             Other App Links Management
           </h1>
           <p className="text-gray-500 text-sm mt-1">
@@ -200,7 +200,7 @@ const AdminAppLinks = () => {
 
         <button
           onClick={() => handleOpenModal()}
-          className="flex items-center justify-center gap-2 bg-[#0F172A] hover:bg-[#003836] text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md active:scale-95 text-sm"
+          className="flex items-center justify-center gap-2 bg-[#2B2620] hover:bg-[#2B2620] text-white px-5 py-3 rounded-xl font-bold transition-all shadow-md active:scale-95 text-sm"
         >
           <Plus size={18} /> Add App Link
         </button>
@@ -215,7 +215,7 @@ const AdminAppLinks = () => {
             placeholder="Search by app name..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#0F172A] transition-all"
+            className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#2B2620] transition-all"
           />
         </div>
 
@@ -400,7 +400,7 @@ const AdminAppLinks = () => {
                   placeholder="e.g. NowStay Partner App"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0F172A] transition-all"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2B2620] transition-all"
                 />
               </div>
 
@@ -416,7 +416,7 @@ const AdminAppLinks = () => {
                       type="button"
                       onClick={() => setUploadMode('file')}
                       className={`px-2.5 py-1 rounded-md transition-colors ${
-                        uploadMode === 'file' ? 'bg-[#0F172A] text-white' : 'bg-gray-100 text-gray-600'
+                        uploadMode === 'file' ? 'bg-[#2B2620] text-white' : 'bg-gray-100 text-gray-600'
                       }`}
                     >
                       Upload File
@@ -425,7 +425,7 @@ const AdminAppLinks = () => {
                       type="button"
                       onClick={() => setUploadMode('url')}
                       className={`px-2.5 py-1 rounded-md transition-colors ${
-                        uploadMode === 'url' ? 'bg-[#0F172A] text-white' : 'bg-gray-100 text-gray-600'
+                        uploadMode === 'url' ? 'bg-[#2B2620] text-white' : 'bg-gray-100 text-gray-600'
                       }`}
                     >
                       Image URL
@@ -435,7 +435,7 @@ const AdminAppLinks = () => {
 
                 {uploadMode === 'file' ? (
                   <div className="space-y-3">
-                    <div className="border-2 border-dashed border-gray-200 hover:border-[#0F172A] rounded-2xl p-4 text-center transition-colors bg-gray-50/50 relative">
+                    <div className="border-2 border-dashed border-gray-200 hover:border-[#2B2620] rounded-2xl p-4 text-center transition-colors bg-gray-50/50 relative">
                       <input
                         type="file"
                         accept="image/*"
@@ -470,7 +470,7 @@ const AdminAppLinks = () => {
                         setFormData({ ...formData, logoUrl: e.target.value });
                         setFilePreview(e.target.value);
                       }}
-                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0F172A] transition-all"
+                      className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2B2620] transition-all"
                     />
 
                     {formData.logoUrl && (
@@ -501,7 +501,7 @@ const AdminAppLinks = () => {
                   placeholder="https://play.google.com/store/apps/details?id=com.app"
                   value={formData.playStoreUrl}
                   onChange={(e) => setFormData({ ...formData, playStoreUrl: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0F172A] transition-all"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2B2620] transition-all"
                 />
               </div>
 
@@ -515,7 +515,7 @@ const AdminAppLinks = () => {
                   placeholder="https://apps.apple.com/app/id123456789"
                   value={formData.appStoreUrl}
                   onChange={(e) => setFormData({ ...formData, appStoreUrl: e.target.value })}
-                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#0F172A] transition-all"
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#2B2620] transition-all"
                 />
               </div>
 
@@ -550,7 +550,7 @@ const AdminAppLinks = () => {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="px-6 py-2.5 rounded-xl bg-[#0F172A] hover:bg-[#003836] text-white font-bold text-sm shadow-md active:scale-95 disabled:opacity-50 transition-all flex items-center gap-2"
+                  className="px-6 py-2.5 rounded-xl bg-[#2B2620] hover:bg-[#2B2620] text-white font-bold text-sm shadow-md active:scale-95 disabled:opacity-50 transition-all flex items-center gap-2"
                 >
                   {submitting ? (
                     <>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { MapPin, Star, IndianRupee, Heart } from 'lucide-react';
+import { MapPin, Star, Heart } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { userService } from '../../services/apiService';
 import toast from 'react-hot-toast';
@@ -110,105 +110,80 @@ const PropertyCard = ({ property, data, className = "", isSaved: initialIsSaved 
 
   const badgeTypeKey = normalizedType || typeRaw;
 
-  const getTypeColor = (type) => {
-    switch (type) {
-      case 'Hotel': return 'bg-blue-100 text-blue-700';
-      case 'Villa': return 'bg-purple-100 text-purple-700';
-      case 'Resort': return 'bg-orange-100 text-orange-700';
-      case 'Homestay': return 'bg-green-100 text-green-700';
-      case 'Hostel': return 'bg-pink-100 text-pink-700';
-      case 'PG': return 'bg-yellow-100 text-yellow-700';
-      default: return 'bg-gray-100 text-gray-700';
-    }
-  };
+  const locationText = (() => {
+    const area = address?.area || item.area;
+    const city = address?.city || item.city;
+    return area && area.trim() ? `${area}, ${city}` : (city || 'Nearby');
+  })();
 
   return (
     <div
       onClick={() => navigate(`/hotel/${_id}`)}
-      className={`group relative bg-white/70 backdrop-blur-xl rounded-[1.5rem] border border-white/50 shadow-sm overflow-hidden cursor-pointer active:scale-[0.98] hover:scale-[1.02] transition-all duration-300 hover:shadow-md ${className}`}
+      className={`group relative bg-[#FFFDF8] rounded-[22px] border border-emerald-100/80 shadow-[0_8px_24px_-14px_rgba(43,38,32,0.35)] overflow-hidden cursor-pointer active:scale-[0.98] transition-all duration-300 hover:shadow-[0_14px_30px_-14px_rgba(43,38,32,0.45)] ${className}`}
     >
-      {/* Image Container - Reduced margin for compactness */}
-      <div className="relative m-1.5 rounded-[1.2rem] overflow-hidden aspect-[16/10] bg-gray-50 flex items-center justify-center">
+      <div className="relative aspect-[16/10] bg-emerald-50 overflow-hidden">
         <img
           src={imageSrc}
           alt={displayName}
-          className="w-full h-full object-cover transition-transform duration-700"
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           onError={(e) => {
             e.target.onerror = null;
             e.target.src = 'https://via.placeholder.com/400x300?text=No+Image';
           }}
         />
 
-        {/* Wishlist Button - Standardized */}
         <button
           onClick={handleToggleSave}
-          className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center bg-white/40 backdrop-blur-md border border-white/30 rounded-full shadow-sm z-20 hover:bg-white active:scale-90 transition-all duration-300"
+          aria-label={isSaved ? 'Remove from wishlist' : 'Add to wishlist'}
+          className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center bg-white/90 rounded-full shadow-sm z-20 hover:bg-white active:scale-90 transition-all"
         >
-          <Heart
-            size={13}
-            className={`${isSaved ? 'fill-red-500 text-red-500' : 'text-white'}`}
-          />
+          <Heart size={15} className={isSaved ? 'fill-red-500 text-red-500' : 'text-textDark'} />
         </button>
 
-        {/* Property Type Badge - Standardized */}
         {typeLabel && (
-          <div className="absolute top-2 left-2 flex items-center gap-1 z-10">
-            <div className="px-2 py-0.5 bg-black/40 backdrop-blur-md border border-white/20 rounded-full text-[9px] uppercase tracking-wider font-bold text-white">
+          <div className="absolute top-3 left-3 flex items-center gap-1 z-10">
+            <div className="px-2.5 py-1 bg-[#FFFDF8]/95 rounded-full text-[10px] uppercase tracking-wider font-bold text-emerald-800">
               {typeLabel}
             </div>
             {(item.starRating || item.config?.starRating) && (
-              <div className="px-2 py-0.5 bg-amber-500/90 backdrop-blur-md border border-amber-300/40 rounded-full text-[9px] font-bold text-white flex items-center gap-0.5 shadow-sm">
-                ★ {item.starRating || item.config?.starRating} Star
+              <div className="px-2 py-1 bg-emerald-600 rounded-full text-[10px] font-bold text-white">
+                ★ {item.starRating || item.config?.starRating}
               </div>
             )}
           </div>
         )}
 
-        {/* Rating Overlay - Minimalist */}
-        <div className="absolute bottom-2 right-2 bg-white/90 backdrop-blur-md px-1.5 py-0.5 rounded-lg flex items-center gap-1 text-[10px] font-bold text-surface shadow-sm z-10">
-          {displayRating !== 'New' && <Star size={10} className="fill-honey text-honey" />}
-          {displayRating}
-        </div>
-
-        {/* Suitability Label */}
         {item.suitability && item.suitability !== 'none' && (
-          <div className="absolute bottom-2 left-2 bg-emerald-500/90 text-white px-2 py-0.5 rounded-lg text-[9px] font-bold z-10">
+          <div className="absolute bottom-3 left-3 bg-teal-700/90 text-white px-2.5 py-1 rounded-full text-[10px] font-bold z-10">
             {item.suitability === 'Both' ? 'FRIENDLY' : item.suitability.toUpperCase()}
           </div>
         )}
       </div>
 
-      {/* Content Area - Compressed padding */}
-      <div className="px-3 pb-3 pt-0.5">
-        <h3 className="font-bold text-xs text-gray-800 line-clamp-1 mb-1">
+      <div className="px-4 pt-3 pb-4">
+        <h3 className="font-serif font-semibold text-[17px] text-textDark line-clamp-1">
           {displayName}
         </h3>
 
-        {/* Location */}
-        <div className="flex items-center gap-1 text-gray-400 mb-2">
-          <MapPin size={10} className="shrink-0" />
-          <span className="text-[10px] font-medium leading-tight truncate">
-            {(() => {
-              const area = address?.area || item.area;
-              const city = address?.city || item.city;
-              return area && area.trim() ? `${area}, ${city}` : (city || 'Nearby');
-            })()}
-          </span>
+        <div className="flex items-center gap-1 text-slate-500 mt-0.5">
+          <MapPin size={12} className="shrink-0" />
+          <span className="text-xs font-medium truncate">{locationText}</span>
         </div>
 
-        <div className="flex items-center justify-between border-t border-gray-100 pt-2">
-          <div className="flex flex-col leading-tight">
-            <span className="text-[9px] font-medium text-gray-400 capitalize">Starts from</span>
-            <div className="flex items-center gap-0.5 text-surface font-bold text-xs">
-              <IndianRupee size={10} />
-              {displayPrice ? displayPrice.toLocaleString() : 'Check'}
-              <span className="text-[9px] text-gray-400 font-normal ml-0.5">/ night</span>
-            </div>
+        <div className="flex items-end justify-between mt-3">
+          <div className="flex items-center gap-1 text-xs font-bold text-textDark">
+            <Star size={13} className="fill-emerald-600 text-emerald-600" />
+            {displayRating}
+            {reviewCount > 0 && <span className="font-medium text-slate-400">({reviewCount})</span>}
           </div>
 
-          <button className="bg-surface text-white px-3 py-1.5 rounded-xl text-[10px] font-bold hover:bg-surface/90 transition-all active:scale-95 shadow-sm">
-            View
-          </button>
+          <div className="text-right leading-tight">
+            <span className="block text-[10px] font-medium text-slate-400">From</span>
+            <span className="font-sans font-extrabold text-lg text-textDark">
+              {displayPrice ? `₹${displayPrice.toLocaleString('en-IN')}` : 'Check'}
+            </span>
+            {displayPrice && <span className="text-[11px] text-slate-400 ml-0.5">/ night</span>}
+          </div>
         </div>
       </div>
     </div>

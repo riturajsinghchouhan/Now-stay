@@ -98,7 +98,7 @@ const LegalPage = () => {
             <div className="px-5 -mt-12 relative z-30 space-y-4 pb-40">
 
                 {error && (
-                    <div className="bg-amber-50 border border-amber-200 text-amber-800 text-xs rounded-xl px-4 py-2">
+                    <div className="bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-xl px-4 py-2">
                         {error}
                     </div>
                 )}

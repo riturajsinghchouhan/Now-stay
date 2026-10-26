@@ -75,16 +75,16 @@ const PartnerSidebar = ({ isOpen, onClose }) => {
                 onClick={() => !isRestricted && handleNavigation(path)}
                 className={`flex items-center gap-4 w-full p-2.5 rounded-xl transition-all group active:scale-95 ${isRestricted ? 'opacity-30 cursor-not-allowed grayscale' : 'hover:bg-gray-50'}`}
             >
-                <div className="w-8 h-8 rounded-full bg-[#0F172A]/5 flex items-center justify-center group-hover:bg-[#0F172A]/10 transition-colors">
-                    <Icon size={16} className="text-[#0F172A]" />
+                <div className="w-8 h-8 rounded-full bg-[#2B2620]/5 flex items-center justify-center group-hover:bg-[#2B2620]/10 transition-colors">
+                    <Icon size={16} className="text-[#2B2620]" />
                 </div>
                 <span className="flex-1 text-left font-medium text-gray-700 text-sm">{label}</span>
                 {badge && (
-                    <span className="text-[10px] font-bold bg-[#0F172A] text-white px-2 py-0.5 rounded-full">
+                    <span className="text-[10px] font-bold bg-[#2B2620] text-white px-2 py-0.5 rounded-full">
                         {badge}
                     </span>
                 )}
-                {!isRestricted && <ChevronRight size={14} className="text-gray-300 group-hover:text-[#0F172A] transition-colors" />}
+                {!isRestricted && <ChevronRight size={14} className="text-gray-300 group-hover:text-[#2B2620] transition-colors" />}
             </button>
         );
     };
@@ -158,7 +158,7 @@ const PartnerSidebar = ({ isOpen, onClose }) => {
                         </div>
 
                         <div className="px-5 mb-6">
-                            <div className="bg-gradient-to-br from-[#0F172A] to-teal-700 rounded-2xl p-4 text-white shadow-lg relative overflow-hidden">
+                            <div className="bg-gradient-to-br from-[#2B2620] to-teal-700 rounded-2xl p-4 text-white shadow-lg relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-24 h-24 bg-white/10 rounded-full blur-2xl -mr-10 -mt-10"></div>
 
                                 <div className="flex items-start justify-between relative z-10">

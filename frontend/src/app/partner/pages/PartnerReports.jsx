@@ -154,7 +154,7 @@ const PartnerReports = () => {
                             <ArrowLeft size={20} />
                         </button>
                         <div>
-                            <h1 className="text-2xl font-black text-[#003836] flex items-center gap-2">
+                            <h1 className="text-2xl font-black text-[#2B2620] flex items-center gap-2">
                                 <BarChart3 className="text-teal-600 animate-pulse" size={24} />
                                 Reports & Analytics
                             </h1>
@@ -168,7 +168,7 @@ const PartnerReports = () => {
                         <button
                             onClick={() => fetchReports(true)}
                             disabled={refreshing || loading}
-                            className="p-2.5 rounded-xl bg-white border border-gray-200 text-gray-500 hover:text-[#003836] hover:border-[#003836] transition-all shadow-sm active:scale-95"
+                            className="p-2.5 rounded-xl bg-white border border-gray-200 text-gray-500 hover:text-[#2B2620] hover:border-[#2B2620] transition-all shadow-sm active:scale-95"
                             title="Refresh Report"
                         >
                             <RefreshCw size={18} className={refreshing ? 'animate-spin' : ''} />
@@ -177,7 +177,7 @@ const PartnerReports = () => {
                         <button
                             onClick={handleExportCSV}
                             disabled={dailyReport.length === 0}
-                            className="flex items-center gap-2 bg-[#0F172A] hover:bg-[#003836] text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95 text-sm"
+                            className="flex items-center gap-2 bg-[#2B2620] hover:bg-[#2B2620] text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95 text-sm"
                         >
                             <FileSpreadsheet size={16} />
                             Export CSV
@@ -194,7 +194,7 @@ const PartnerReports = () => {
                             <select
                                 value={selectedProperty}
                                 onChange={(e) => setSelectedProperty(e.target.value)}
-                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-[#003836] focus:outline-none focus:border-teal-500"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-[#2B2620] focus:outline-none focus:border-teal-500"
                             >
                                 <option value="all">All Properties ({properties.length})</option>
                                 {properties.map(p => (
@@ -210,7 +210,7 @@ const PartnerReports = () => {
                                 type="date"
                                 value={startDate}
                                 onChange={(e) => setStartDate(e.target.value)}
-                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-[#003836] focus:outline-none focus:border-teal-500"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-[#2B2620] focus:outline-none focus:border-teal-500"
                             />
                         </div>
 
@@ -221,7 +221,7 @@ const PartnerReports = () => {
                                 type="date"
                                 value={endDate}
                                 onChange={(e) => setEndDate(e.target.value)}
-                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-[#003836] focus:outline-none focus:border-teal-500"
+                                className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm font-bold text-[#2B2620] focus:outline-none focus:border-teal-500"
                             />
                         </div>
 
@@ -231,19 +231,19 @@ const PartnerReports = () => {
                             <div className="flex gap-2">
                                 <button
                                     onClick={() => applyPreset('this_month')}
-                                    className="flex-1 py-3 text-xs font-bold text-gray-600 bg-gray-50 hover:bg-gray-100 hover:text-[#003836] rounded-xl border border-gray-200/50 transition-colors"
+                                    className="flex-1 py-3 text-xs font-bold text-gray-600 bg-gray-50 hover:bg-gray-100 hover:text-[#2B2620] rounded-xl border border-gray-200/50 transition-colors"
                                 >
                                     This Month
                                 </button>
                                 <button
                                     onClick={() => applyPreset('last_month')}
-                                    className="flex-1 py-3 text-xs font-bold text-gray-600 bg-gray-50 hover:bg-gray-100 hover:text-[#003836] rounded-xl border border-gray-200/50 transition-colors"
+                                    className="flex-1 py-3 text-xs font-bold text-gray-600 bg-gray-50 hover:bg-gray-100 hover:text-[#2B2620] rounded-xl border border-gray-200/50 transition-colors"
                                 >
                                     Last Month
                                 </button>
                                 <button
                                     onClick={() => applyPreset('last_30')}
-                                    className="flex-1 py-3 text-xs font-bold text-gray-600 bg-gray-50 hover:bg-gray-100 hover:text-[#003836] rounded-xl border border-gray-200/50 transition-colors"
+                                    className="flex-1 py-3 text-xs font-bold text-gray-600 bg-gray-50 hover:bg-gray-100 hover:text-[#2B2620] rounded-xl border border-gray-200/50 transition-colors"
                                 >
                                     30 Days
                                 </button>
@@ -254,7 +254,7 @@ const PartnerReports = () => {
 
                 {loading ? (
                     <div className="py-24 flex items-center justify-center">
-                        <div className="w-10 h-10 border-4 border-[#0F172A] border-t-transparent rounded-full animate-spin"></div>
+                        <div className="w-10 h-10 border-4 border-[#2B2620] border-t-transparent rounded-full animate-spin"></div>
                     </div>
                 ) : (
                     <>
@@ -266,7 +266,7 @@ const PartnerReports = () => {
                                     <Landmark size={20} />
                                 </div>
                                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Net Payout</p>
-                                <h3 className="text-xl sm:text-2xl font-black text-[#003836] mt-1">
+                                <h3 className="text-xl sm:text-2xl font-black text-[#2B2620] mt-1">
                                     {formatCurrency(stats?.earnings)}
                                 </h3>
                                 <p className="text-[10px] text-emerald-600 font-bold mt-1">Your net earnings</p>
@@ -278,7 +278,7 @@ const PartnerReports = () => {
                                     <TrendingUp size={20} />
                                 </div>
                                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Platform Nights</p>
-                                <h3 className="text-xl sm:text-2xl font-black text-[#003836] mt-1">
+                                <h3 className="text-xl sm:text-2xl font-black text-[#2B2620] mt-1">
                                     {stats?.platformNights || 0} <span className="text-xs font-semibold text-gray-400">Rooms</span>
                                 </h3>
                                 <p className="text-[10px] text-teal-600 font-bold mt-1">Booked from our side</p>
@@ -290,7 +290,7 @@ const PartnerReports = () => {
                                     <CheckCircle2 size={20} />
                                 </div>
                                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Blank Days</p>
-                                <h3 className="text-xl sm:text-2xl font-black text-[#003836] mt-1">
+                                <h3 className="text-xl sm:text-2xl font-black text-[#2B2620] mt-1">
                                     {stats?.blankDays || 0} <span className="text-xs font-semibold text-gray-400">Days</span>
                                 </h3>
                                 <p className="text-[10px] text-gray-400 font-bold mt-1">100% vacant days</p>
@@ -302,7 +302,7 @@ const PartnerReports = () => {
                                     <Sparkles size={20} />
                                 </div>
                                 <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Continue Booking</p>
-                                <h3 className="text-xl sm:text-2xl font-black text-[#003836] mt-1">
+                                <h3 className="text-xl sm:text-2xl font-black text-[#2B2620] mt-1">
                                     {stats?.consecutiveStreak || 0} <span className="text-xs font-semibold text-gray-400">Days</span>
                                 </h3>
                                 <p className="text-[10px] text-amber-600 font-bold mt-1">Longest consecutive streak</p>
@@ -311,7 +311,7 @@ const PartnerReports = () => {
 
                         {/* Revenue Breakdown */}
                         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                            <div className="lg:col-span-1 bg-[#0F172A] rounded-3xl p-8 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
+                            <div className="lg:col-span-1 bg-[#2B2620] rounded-3xl p-8 text-white shadow-xl flex flex-col justify-between relative overflow-hidden">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-teal-500/10 rounded-full blur-3xl -mr-12 -mt-12"></div>
                                 
                                 <div>
@@ -357,7 +357,7 @@ const PartnerReports = () => {
                             {/* Daily Breakdown and Source Occupancy */}
                             <div className="lg:col-span-2 bg-white border border-gray-200 rounded-3xl p-6 shadow-sm flex flex-col justify-between">
                                 <div>
-                                    <h3 className="text-base font-bold text-[#003836] mb-6 pl-1">
+                                    <h3 className="text-base font-bold text-[#2B2620] mb-6 pl-1">
                                         Occupancy Breakdown (Room-Nights)
                                     </h3>
                                     
@@ -430,7 +430,7 @@ const PartnerReports = () => {
                         {/* Daily Details Table */}
                         <div className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-sm">
                             <div className="p-6 border-b border-gray-100">
-                                <h3 className="text-base font-bold text-[#003836]">Daily Occupancy Calendar</h3>
+                                <h3 className="text-base font-bold text-[#2B2620]">Daily Occupancy Calendar</h3>
                             </div>
                             
                             <div className="overflow-x-auto">

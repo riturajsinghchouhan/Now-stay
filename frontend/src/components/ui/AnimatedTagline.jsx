@@ -9,8 +9,8 @@ const AnimatedTagline = () => {
             icon: ShieldCheck,
             title: "100% Verified",
             sub: "Quality Assured",
-            color: "text-blue-600",
-            bg: "bg-blue-50"
+            color: "text-emerald-600",
+            bg: "bg-emerald-50"
         },
         {
             id: 2,
@@ -33,8 +33,8 @@ const AnimatedTagline = () => {
             icon: Clock,
             title: "24/7 Support",
             sub: "Always Here",
-            color: "text-orange-500",
-            bg: "bg-orange-50"
+            color: "text-emerald-500",
+            bg: "bg-emerald-50"
         }
     ];
 

@@ -256,7 +256,7 @@ const PartnerSubscriptions = () => {
                 onClick={() => handleFilterChange(tab.key)}
                 className={`px-4 py-1.5 rounded-full text-xs font-black uppercase tracking-wider transition-all ${
                   activeFilter === tab.key
-                    ? 'bg-[#0F172A] text-white shadow-md'
+                    ? 'bg-[#2B2620] text-white shadow-md'
                     : 'bg-gray-100 text-gray-500 hover:bg-gray-200'
                 }`}
               >
@@ -294,7 +294,7 @@ const PartnerSubscriptions = () => {
           <Building2 size={48} className="text-gray-200 mx-auto mb-3" />
           <h3 className="font-bold text-gray-500 mb-1">No plans found for this type</h3>
           <p className="text-sm text-gray-400 mb-4">Try selecting "All Plans" or contact support</p>
-          <button onClick={() => handleFilterChange('all')} className="px-6 py-2 bg-[#0F172A] text-white rounded-xl text-sm font-bold hover:bg-[#003836] transition-all">
+          <button onClick={() => handleFilterChange('all')} className="px-6 py-2 bg-[#2B2620] text-white rounded-xl text-sm font-bold hover:bg-[#2B2620] transition-all">
             Show All Plans
           </button>
         </div>

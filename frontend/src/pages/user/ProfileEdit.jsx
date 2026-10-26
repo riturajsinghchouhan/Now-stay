@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { User, Phone, Mail, ArrowLeft, Save, Loader2, MapPin, Navigation, Home, Camera, Trash2, AlertTriangle, LogOut } from 'lucide-react';
+import { User, Phone, Mail, ArrowLeft, Save, Pencil, Loader2, MapPin, Navigation, Home, Camera, Trash2, AlertTriangle, LogOut } from 'lucide-react';
 import { authService, userService } from '../../services/apiService';
 import toast from 'react-hot-toast';
 import AuthRequired from '../../components/ui/AuthRequired';
@@ -354,7 +354,7 @@ const ProfileEdit = () => {
   };
 
   return (
-    <div className="min-h-screen bg-emerald-100 flex flex-col items-center pt-safe-top pb-24 md:pb-0">
+    <div className="min-h-screen bg-background flex flex-col items-center pt-safe-top pb-24 md:pb-0">
 
       {/* Sticky Header */}
       <div className="sticky top-0 left-0 right-0 w-full z-20 bg-white/70 backdrop-blur-xl px-6 py-4 flex items-center justify-between border-b border-white/50 shadow-sm mb-6">
@@ -364,7 +364,7 @@ const ProfileEdit = () => {
         <h1 className="text-lg font-black text-gray-900 tracking-tight">{isEditing ? 'Edit Profile' : 'My Profile'}</h1>
         {!isEditing && (
           <button onClick={() => setIsEditing(true)} className="p-2 rounded-full bg-surface text-white shadow-lg shadow-surface/20 hover:scale-105 transition-all active:scale-95">
-            <Save size={18} />
+            <Pencil size={18} />
           </button>
         )}
         {isEditing && <div className="w-10"></div>}
@@ -376,11 +376,11 @@ const ProfileEdit = () => {
           animate={{ opacity: 1, y: 0 }}
           className="w-full max-w-md px-4 mb-4"
         >
-          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-amber-100 flex items-center justify-center text-amber-600 shrink-0">
+          <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 shrink-0">
               <AlertTriangle size={20} />
             </div>
-            <p className="text-xs font-bold text-amber-800 leading-relaxed">
+            <p className="text-xs font-bold text-emerald-800 leading-relaxed">
               Please complete your profile details to continue with your hotel booking.
             </p>
           </div>

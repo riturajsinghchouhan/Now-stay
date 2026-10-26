@@ -101,20 +101,20 @@ const PropertyTypeSelector = ({ selectedTypes = [], onChange, maxSelect = Infini
             onClick={() => toggle(item.key)}
             className={`flex items-center gap-3 p-4 rounded-2xl border-2 transition-all duration-200 text-left active:scale-[0.97] ${
               isSelected
-                ? 'border-[#0F172A] bg-gray-50 shadow-md ring-2 ring-[#0F172A]/10'
+                ? 'border-[#2B2620] bg-gray-50 shadow-md ring-2 ring-[#2B2620]/10'
                 : 'border-gray-100 bg-white hover:border-gray-300 hover:shadow-sm'
             }`}
           >
             {/* Icon box */}
             <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 transition-all ${
-              isSelected ? 'bg-[#0F172A] text-white' : item.color
+              isSelected ? 'bg-[#2B2620] text-white' : item.color
             }`}>
               <Icon size={22} />
             </div>
 
             {/* Label */}
             <div className="flex-1 min-w-0">
-              <p className={`font-black text-sm uppercase tracking-tight leading-tight ${isSelected ? 'text-[#0F172A]' : 'text-gray-800'}`}>
+              <p className={`font-black text-sm uppercase tracking-tight leading-tight ${isSelected ? 'text-[#2B2620]' : 'text-gray-800'}`}>
                 {item.label}
               </p>
               <p className="text-[10px] text-gray-400 font-bold uppercase mt-0.5">{item.badge}</p>

@@ -85,12 +85,12 @@ const SupportPage = () => {
                             href={cleanPhoneForWa ? `https://wa.me/91${cleanPhoneForWa}` : `https://wa.me/919970907005`}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-blue-50 border border-blue-100 group active:scale-95 transition-transform"
+                            className="flex flex-col items-center justify-center gap-2 p-4 rounded-xl bg-emerald-50 border border-emerald-100 group active:scale-95 transition-transform"
                         >
-                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-blue-600 shadow-sm transition-transform group-hover:scale-105">
+                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-emerald-600 shadow-sm transition-transform group-hover:scale-105">
                                 <MessageSquare size={20} />
                             </div>
-                            <span className="text-xs font-bold text-blue-700">Chat with Us</span>
+                            <span className="text-xs font-bold text-emerald-700">Chat with Us</span>
                         </a>
                         <a
                             href={`tel:${cleanPhoneForTel}`}
@@ -124,7 +124,7 @@ const SupportPage = () => {
                             href={`mailto:${contactInfo.email}`}
                             className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-gray-50 active:scale-98 transition-all"
                         >
-                            <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
+                            <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
                                 <Mail size={16} />
                             </div>
                             <div className="flex flex-col min-w-0">

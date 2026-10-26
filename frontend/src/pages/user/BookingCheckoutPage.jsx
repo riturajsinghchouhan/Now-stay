@@ -313,7 +313,7 @@ const BookingCheckoutPage = () => {
                 email: user?.email || '',
                 contact: guestDetails.phone || ''
               },
-              theme: { color: "#0F172A" }
+              theme: { color: "#2B2620" }
             });
           } catch (paymentErr) {
             // If user closed the payment popup, we should cancel the pending booking to release inventory
@@ -360,7 +360,7 @@ const BookingCheckoutPage = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-emerald-100 pb-20 md:pb-10">
+      <div className="min-h-screen bg-background pb-20 md:pb-10">
         <div className="bg-white/70 backdrop-blur-xl border-b border-white/50 sticky top-0 z-30 shadow-sm shadow-emerald-900/5">
           <div className="max-w-3xl mx-auto px-4 h-16 flex items-center gap-4">
             <button onClick={() => navigate(-1)} className="p-2 hover:bg-white/50 rounded-full transition-colors active:scale-90">
@@ -386,7 +386,7 @@ const BookingCheckoutPage = () => {
               <h2 className="font-black text-gray-900 leading-tight mb-1">{property.name}</h2>
               <p className="text-xs text-gray-500 font-medium mb-2">{property.address?.city || property.address}, {property.address?.state}</p>
               <div className="flex items-center gap-1">
-                <span className="bg-honey/10 text-yellow-700 text-[10px] font-black px-2 py-0.5 rounded-full border border-honey/20">
+                <span className="bg-honey/10 text-emerald-700 text-[10px] font-black px-2 py-0.5 rounded-full border border-honey/20">
                   {property.avgRating || 'New'} ★
                 </span>
               </div>
@@ -524,8 +524,8 @@ const BookingCheckoutPage = () => {
               )}
 
               {(useWallet && ['online', 'prepaid'].includes(paymentMethod) && walletDeduction > 0) && (
-                <div className="flex justify-between text-sm text-blue-700 font-bold">
-                  <span className="flex items-center gap-1.5"><Wallet size={14} className="text-blue-500" /> Wallet Balance Used</span>
+                <div className="flex justify-between text-sm text-emerald-700 font-bold">
+                  <span className="flex items-center gap-1.5"><Wallet size={14} className="text-emerald-500" /> Wallet Balance Used</span>
                   <span>- ₹{walletDeduction.toLocaleString()}</span>
                 </div>
               )}
@@ -567,19 +567,19 @@ const BookingCheckoutPage = () => {
           <div className="bg-white/80 backdrop-blur-md rounded-[2rem] p-6 shadow-xl shadow-emerald-900/5 border border-white">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-black text-gray-900 text-sm tracking-tight flex items-center gap-2">
-                <Wallet size={20} className="text-blue-500" />
+                <Wallet size={20} className="text-emerald-500" />
                 Wallet Balance
               </h3>
-              <span className="text-xs font-black bg-blue-100 text-blue-700 px-3 py-1 rounded-full border border-blue-200">
+              <span className="text-xs font-black bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full border border-emerald-200">
                 ₹{walletBalance.toLocaleString()}
               </span>
             </div>
 
-            <label className={`flex items-start gap-4 p-4 rounded-2xl border-2 cursor-pointer transition-all active:scale-[0.98] ${useWallet && ['online', 'prepaid'].includes(paymentMethod) ? 'border-primary-solid bg-blue-50/30' : 'border-gray-50 bg-white/50'}`}>
+            <label className={`flex items-start gap-4 p-4 rounded-2xl border-2 cursor-pointer transition-all active:scale-[0.98] ${useWallet && ['online', 'prepaid'].includes(paymentMethod) ? 'border-primary-solid bg-emerald-50/30' : 'border-gray-50 bg-white/50'}`}>
               <div className="relative flex items-center pt-1">
                 <input
                   type="checkbox"
-                  className="w-5 h-5 text-blue-600 rounded-lg focus:ring-blue-500 border-gray-300 pointer-events-none"
+                  className="w-5 h-5 text-emerald-600 rounded-lg focus:ring-emerald-500 border-gray-300 pointer-events-none"
                   checked={useWallet}
                   disabled={walletBalance <= 0 || !['online', 'prepaid'].includes(paymentMethod)}
                   onChange={() => { }}
@@ -683,7 +683,7 @@ const BookingCheckoutPage = () => {
                     Pay securely using UPI, Cards or Netbanking for a hassle-free check-in.
                   </p>
                   <div className="flex gap-2">
-                    <span className="bg-blue-100 text-blue-700 text-[9px] uppercase font-black px-2 py-0.5 rounded-full border border-blue-200">100% Secure</span>
+                    <span className="bg-emerald-100 text-emerald-700 text-[9px] uppercase font-black px-2 py-0.5 rounded-full border border-emerald-200">100% Secure</span>
                   </div>
                 </div>
               </label>

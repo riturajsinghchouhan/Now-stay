@@ -59,7 +59,7 @@ const BookingConfirmationPage = () => {
             
             if (!cancelled) {
                 const end = Date.now() + 3000;
-                const colors = ['#10B981', '#3B82F6', '#F59E0B'];
+                const colors = ['#B8893C', '#3B82F6', '#F59E0B'];
 
                 (function frame() {
                     confetti({
@@ -87,7 +87,7 @@ const BookingConfirmationPage = () => {
 
     if (loading) {
         return (
-            <div className="min-h-screen flex items-center justify-center bg-emerald-100">
+            <div className="min-h-screen flex items-center justify-center bg-background">
                 <div className="flex flex-col items-center">
                     <div className="w-8 h-8 border-4 border-black border-t-transparent rounded-full animate-spin mb-4"></div>
                     <p className="text-gray-500 font-medium">Loading Booking...</p>
@@ -181,7 +181,7 @@ const BookingConfirmationPage = () => {
     const contactPhone = (property.contactNumber || property.partnerId?.phone || '').replace(/\D/g, '') || null;
 
     return (
-        <div className="min-h-screen bg-emerald-100 pb-12 print:bg-white print:min-h-0 print:pb-0">
+        <div className="min-h-screen bg-background pb-12 print:bg-white print:min-h-0 print:pb-0">
             {/* Global Print Styles for Strict Isolation */}
             <style>
                 {`
@@ -213,7 +213,7 @@ const BookingConfirmationPage = () => {
                         {isCancelled ? 'Booking Details' : 'Booking Confirmation'}
                     </h1>
                     <div className="flex items-center gap-1">
-                        <button onClick={() => setShowInvoice(true)} className="p-2 hover:bg-gray-100 rounded-full transition-colors text-blue-600" title="View Professional Invoice">
+                        <button onClick={() => setShowInvoice(true)} className="p-2 hover:bg-gray-100 rounded-full transition-colors text-emerald-600" title="View Professional Invoice">
                             <FileText size={20} />
                         </button>
                     </div>
@@ -466,12 +466,12 @@ const BookingConfirmationPage = () => {
                                     <span className="text-xl font-black text-gray-900">₹{booking.totalAmount?.toLocaleString()}</span>
                                 </div>
                                 {(booking.paymentMethod === 'prepaid' && booking.remainingAmount > 0) && (
-                                    <div className="bg-orange-50 -mx-6 px-6 py-3 border-b border-orange-100 flex flex-col gap-1">
+                                    <div className="bg-emerald-50 -mx-6 px-6 py-3 border-b border-emerald-100 flex flex-col gap-1">
                                         <div className="flex justify-between text-sm text-gray-700">
                                             <span>Advance Paid Now</span>
                                             <span className="font-bold">₹{booking.amountPaid?.toLocaleString()}</span>
                                         </div>
-                                        <div className="flex justify-between text-sm text-orange-700 font-bold">
+                                        <div className="flex justify-between text-sm text-emerald-700 font-bold">
                                             <span>To Pay at Hotel</span>
                                             <span>₹{booking.remainingAmount?.toLocaleString()}</span>
                                         </div>
@@ -479,13 +479,13 @@ const BookingConfirmationPage = () => {
                                 )}
                             </div>
 
-                            <div className={`p-4 rounded-xl flex items-center gap-3 ${booking.paymentStatus === 'paid' ? 'bg-green-50' : booking.paymentStatus === 'partial' ? 'bg-orange-50' : 'bg-yellow-50'}`}>
-                                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${booking.paymentStatus === 'paid' ? 'bg-green-100 text-green-600' : booking.paymentStatus === 'partial' ? 'bg-orange-100 text-orange-600' : 'bg-yellow-100 text-yellow-600'}`}>
+                            <div className={`p-4 rounded-xl flex items-center gap-3 ${booking.paymentStatus === 'paid' ? 'bg-green-50' : booking.paymentStatus === 'partial' ? 'bg-emerald-50' : 'bg-emerald-50'}`}>
+                                <div className={`w-10 h-10 rounded-full flex items-center justify-center ${booking.paymentStatus === 'paid' ? 'bg-green-100 text-green-600' : booking.paymentStatus === 'partial' ? 'bg-emerald-100 text-emerald-600' : 'bg-emerald-100 text-emerald-600'}`}>
                                     {booking.paymentStatus === 'paid' ? <CheckCircle size={20} /> : <FileText size={20} />}
                                 </div>
                                 <div>
                                     <p className="text-xs font-bold uppercase text-gray-500">Payment Status</p>
-                                    <p className={`font-bold ${booking.paymentStatus === 'paid' ? 'text-green-700' : booking.paymentStatus === 'partial' ? 'text-orange-700' : 'text-yellow-700'}`}>
+                                    <p className={`font-bold ${booking.paymentStatus === 'paid' ? 'text-green-700' : booking.paymentStatus === 'partial' ? 'text-emerald-700' : 'text-emerald-700'}`}>
                                         {booking.paymentStatus === 'paid' ? 'Paid Completely' : booking.paymentStatus === 'partial' ? 'Partially Paid (Prepaid)' : 'Pay at Hotel'}
                                     </p>
                                 </div>
@@ -659,7 +659,7 @@ const BookingConfirmationPage = () => {
                             </button>
                             <button 
                                 onClick={() => window.print()}
-                                className="px-5 py-2.5 bg-blue-600 text-white rounded-xl text-xs sm:text-sm font-bold uppercase shadow-md shadow-blue-600/20 hover:bg-blue-700 active:scale-95 transition-all flex items-center gap-2 whitespace-nowrap"
+                                className="px-5 py-2.5 bg-emerald-600 text-white rounded-xl text-xs sm:text-sm font-bold uppercase shadow-md shadow-emerald-600/20 hover:bg-emerald-700 active:scale-95 transition-all flex items-center gap-2 whitespace-nowrap"
                             >
                                 <Printer size={15} /> Print / Download
                             </button>

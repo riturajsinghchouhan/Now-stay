@@ -707,7 +707,8 @@ export const getBookingDetail = async (req, res) => {
 
     // Allow User (Owner) or Admin/Partner (if needed, but separate endpoints exist usually)
     // For this specific 'user' endpoint, strictly check ownership
-    if (booking.userId.toString() !== req.user._id.toString()) {
+    const ownerId = (booking.userId?._id || booking.userId)?.toString();
+    if (ownerId !== req.user._id.toString()) {
       return res.status(403).json({ message: 'Not authorized to view this booking' });
     }
 
@@ -914,7 +915,14 @@ export const cancelBooking = async (req, res) => {
     // --- WALLET REVERSAL LOGIC ---
     // Pay at Hotel: Reverse Commission Deduction (Refund Partner, Debit Admin)
     if (booking.paymentMethod === 'pay_at_hotel') {
-      const refundAmount = (booking.taxes || 0) + (booking.adminCommission || 0);
+      // Refund exactly what was debited at booking time (adminCommission + platformFee), and never twice.
+      const TransactionModel = mongoose.model('Transaction');
+      const refKeys = [booking.bookingId, booking._id.toString()];
+      const originalDebit = await TransactionModel.findOne({ category: 'commission_deduction', reference: { $in: refKeys } });
+      const alreadyRefunded = await TransactionModel.findOne({ category: 'commission_refund', reference: { $in: refKeys } });
+      const refundAmount = alreadyRefunded
+        ? 0
+        : (originalDebit ? originalDebit.amount : (booking.adminCommission || 0) + (booking.platformFee || 0));
 
       // Fetch full booking for partnerId
       const fullBooking = await Booking.findById(booking._id).populate('propertyId').populate('userId');
