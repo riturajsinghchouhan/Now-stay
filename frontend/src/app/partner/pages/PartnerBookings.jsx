@@ -69,7 +69,7 @@ const BookingCard = ({ booking }) => {
 
             {/* Guest & Hotel Info */}
             <div className="mb-4">
-                <h3 className="text-lg font-black text-[#003836] leading-none mb-1">
+                <h3 className="text-lg font-black text-[#2B2620] leading-none mb-1">
                     {guestName}
                 </h3>
                 <p className="text-xs text-gray-400 font-medium">{hotelName}</p>
@@ -78,19 +78,19 @@ const BookingCard = ({ booking }) => {
             {/* Details Grid */}
             <div className="grid grid-cols-2 gap-y-3 gap-x-4 text-xs mb-5">
                 <div className="flex items-center gap-2 text-gray-600">
-                    <Calendar size={14} className="text-[#0F172A]" />
+                    <Calendar size={14} className="text-[#2B2620]" />
                     <span className="font-bold text-gray-700">{checkInDate} - {checkOutDate}</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
-                    <Clock size={14} className="text-[#0F172A]" />
+                    <Clock size={14} className="text-[#2B2620]" />
                     <span className="font-medium">{nights} Nights</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
-                    <User size={14} className="text-[#0F172A]" />
+                    <User size={14} className="text-[#2B2620]" />
                     <span className="font-medium">{guestCount} Guests</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
-                    <BedDouble size={14} className="text-[#0F172A]" />
+                    <BedDouble size={14} className="text-[#2B2620]" />
                     <span className="font-medium">{roomsCount} {roomsCount > 1 ? 'Rooms' : 'Room'}</span>
                 </div>
             </div>
@@ -105,7 +105,7 @@ const BookingCard = ({ booking }) => {
                     <span className={`text-[10px] font-black uppercase tracking-widest ${(booking.remainingAmount > 0 || booking.paymentStatus === 'pending') ? 'text-red-500' : 'text-gray-400'}`}>
                         {(booking.remainingAmount > 0 || booking.paymentStatus === 'pending') ? 'Collect at Hotel' : 'Total Paid'}
                     </span>
-                    <span className={`font-black text-xl ${(booking.remainingAmount > 0 || booking.paymentStatus === 'pending') ? 'text-red-600' : 'text-[#0F172A]'}`}>
+                    <span className={`font-black text-xl ${(booking.remainingAmount > 0 || booking.paymentStatus === 'pending') ? 'text-red-600' : 'text-[#2B2620]'}`}>
                         ₹{booking.remainingAmount > 0 
                             ? booking.remainingAmount.toLocaleString('en-IN') 
                             : (booking.paymentStatus === 'pending' 
@@ -119,7 +119,7 @@ const BookingCard = ({ booking }) => {
             <div className="flex items-center gap-2">
                 <button
                     onClick={(e) => { e.stopPropagation(); navigate(`/hotel/bookings/${booking._id}`); }}
-                    className="flex-1 bg-[#0F172A] text-white h-9 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform hover:bg-[#003f3d]"
+                    className="flex-1 bg-[#2B2620] text-white h-9 rounded-xl text-xs font-bold flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform hover:bg-[#003f3d]"
                 >
                     View Details
                 </button>
@@ -189,7 +189,7 @@ const PartnerBookings = () => {
                                 key={tab.id}
                                 onClick={() => setActiveTab(tab.id)}
                                 className={`px-4 py-1.5 rounded-full text-xs font-bold transition-all whitespace-nowrap border ${activeTab === tab.id
-                                    ? 'bg-[#0F172A] text-white border-[#0F172A] shadow-sm'
+                                    ? 'bg-[#2B2620] text-white border-[#2B2620] shadow-sm'
                                     : 'bg-white text-gray-500 border-gray-200'
                                     }`}
                             >
@@ -200,7 +200,7 @@ const PartnerBookings = () => {
                     <button
                         onClick={fetchBookings}
                         disabled={loading}
-                        className="p-1.5 rounded-full bg-white border border-gray-200 text-gray-400 hover:text-[#0F172A] hover:border-[#0F172A] transition-all shadow-sm active:scale-95 disabled:opacity-50"
+                        className="p-1.5 rounded-full bg-white border border-gray-200 text-gray-400 hover:text-[#2B2620] hover:border-[#2B2620] transition-all shadow-sm active:scale-95 disabled:opacity-50"
                         title="Refresh Bookings"
                     >
                         <RotateCw size={14} className={loading ? 'animate-spin' : ''} />
@@ -212,7 +212,7 @@ const PartnerBookings = () => {
             <div className="px-4 mt-2">
                 {loading ? (
                     <div className="flex justify-center py-12">
-                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#0F172A]"></div>
+                        <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-[#2B2620]"></div>
                     </div>
                 ) : filteredBookings.length > 0 ? (
                     <div className="space-y-3 animate-fadeIn">

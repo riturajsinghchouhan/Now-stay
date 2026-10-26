@@ -1,36 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-background: #ACDCD9;
-  /* Much lighter teal for contrast */
+  /* Lumiere palette: warm cream, antique gold, deep olive */
+  --color-background: #FAF6EE;
+  --color-surface: #4F5338;
+  --color-accent: #B8893C;
+  --color-textLight: #FBF6EA;
+  --color-textDark: #2B2620;
+  --color-honey: #D4A95A;
+  --color-cardWhite: #FFFDF8;
 
-  --color-surface: #004F4D;
-  /* Deep Teal Text/Elements */
-  --color-accent: #14B8A6;
-  --color-textLight: #E6F7F6;
-  --color-textDark: #003836;
-  /* New Dark Text variable */
-
-  --color-honey: #FFC107;
-  --color-cardWhite: #FFFFFF;
-
-  --font-sans: "Poppins", sans-serif;
+  --font-sans: "Manrope", system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
 
   --radius-xl: 16px;
   --radius-2xl: 20px;
 
-  /* Hotel Partner Theme - Updated to match User Module */
-  --color-partner-bg: #FFFFFF;
-  --color-partner-text-primary: #004F4D;
-  /* var(--color-surface) */
-  --color-partner-text-secondary: #003836;
-  /* var(--color-textDark) */
-  --color-partner-btn: #004F4D;
-  /* var(--color-surface) */
-  --color-partner-card: #F5F5F5;
-  --color-partner-border: #ACDCD9;
-  /* var(--color-background) */
+  /* emerald -> antique gold (accents, buttons, soft fills) */
+  --color-emerald-50: #FBF6EA;
+  --color-emerald-100: #F4EAD0;
+  --color-emerald-200: #E8D5A8;
+  --color-emerald-300: #DCBF84;
+  --color-emerald-400: #CDA85F;
+  --color-emerald-500: #C09546;
+  --color-emerald-600: #B8893C;
+  --color-emerald-700: #96702E;
+  --color-emerald-800: #735523;
+  --color-emerald-900: #4F3A18;
+  --color-emerald-950: #2E2210;
+
+  /* teal -> deep olive */
+  --color-teal-50: #F4F5EC;
+  --color-teal-100: #E6E8D4;
+  --color-teal-200: #CDD1AC;
+  --color-teal-300: #AEB482;
+  --color-teal-400: #8A9160;
+  --color-teal-500: #6E7549;
+  --color-teal-600: #5B6040;
+  --color-teal-700: #4F5338;
+  --color-teal-800: #3F422C;
+  --color-teal-900: #2F3221;
+  --color-teal-950: #1C1E13;
+
+  /* neutrals -> warm stone */
+  --color-slate-50: #FAF7F0;
+  --color-slate-100: #F3EEE3;
+  --color-slate-200: #E7E0D0;
+  --color-slate-300: #D3CAB6;
+  --color-slate-400: #A89F8C;
+  --color-slate-500: #857C6A;
+  --color-slate-600: #655D4E;
+  --color-slate-700: #4A4338;
+  --color-slate-800: #342E26;
+  --color-slate-900: #2B2620;
+  --color-slate-950: #1A1712;
+  --color-gray-50: #FAF7F0;
+  --color-gray-100: #F3EEE3;
+  --color-gray-200: #E7E0D0;
+  --color-gray-300: #D3CAB6;
+  --color-gray-400: #A89F8C;
+  --color-gray-500: #857C6A;
+  --color-gray-600: #655D4E;
+  --color-gray-700: #4A4338;
+  --color-gray-800: #342E26;
+  --color-gray-900: #2B2620;
+  --color-gray-950: #1A1712;
+
+  /* Partner theme */
+  --color-partner-bg: #FAF6EE;
+  --color-partner-text-primary: #4F5338;
+  --color-partner-text-secondary: #2B2620;
+  --color-partner-btn: #4F5338;
+  --color-partner-card: #FFFDF8;
+  --color-partner-border: #E8D5A8;
 }
 
 @layer base {
@@ -40,7 +83,7 @@
        Clean Light Gray/White as per "Light Theme" preference.
        The previous teal gradient was rejected.
     */
-    @apply bg-emerald-100 text-textDark font-sans min-h-screen selection:bg-teal-100;
+    @apply bg-background text-textDark font-sans min-h-screen selection:bg-emerald-200;
 
     /* Prevent pull-to-refresh and overscroll to keep app-like experience */
     overscroll-behavior-y: none;
@@ -52,6 +95,17 @@
     overflow-x: hidden;
     width: 100%;
     position: relative;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"],
+  input[type="range"] {
+    accent-color: #B8893C;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
   }
 
   /* Prevent zoom on focus for iOS by ensuring font-size is at least 16px */
@@ -104,7 +158,7 @@ body:has(#hotel-root) {
 }
 
 .input {
-  @apply w-full px-4 py-3 rounded-xl border-2 border-gray-400 outline-none transition-all placeholder:text-gray-400 focus:border-[#004F4D] focus:ring-4 focus:ring-[#004F4D]/10 bg-white text-[#003836] font-medium shadow-sm hover:border-gray-500;
+  @apply w-full px-4 py-3 rounded-xl border-2 border-emerald-200 outline-none transition-all placeholder:text-gray-400 focus:border-emerald-600 focus:ring-4 focus:ring-emerald-600/10 bg-white text-textDark font-medium shadow-sm hover:border-emerald-400;
 }
 
 @media print {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const PartnerFooter = () => {
     return (
-        <footer className="bg-[#0f1422] text-white pt-12 pb-24 md:pb-12 px-6 md:px-12 lg:px-20 border-t border-gray-800">
+        <footer className="bg-[#2B2620] text-white pt-12 pb-24 md:pb-12 px-6 md:px-12 lg:px-20 border-t border-gray-800">
             <div className="max-w-7xl mx-auto space-y-10">
                 
                 {/* Top Section: 4 Equal Grid Columns */}
@@ -13,10 +13,10 @@ const PartnerFooter = () => {
                     <div className="space-y-3">
                         <div>
                             <span className="text-2xl font-black tracking-tight text-white block">
-                                NOW<span className="text-[#00d2ad]">STAY</span>
+                                NOW<span className="text-[#B8893C]">STAY</span>
                             </span>
-                            <div className="w-8 h-[3px] bg-[#00d2ad] mt-1.5 mb-3" />
-                            <span className="text-[10px] font-bold text-[#00d2ad] uppercase tracking-widest px-2 py-0.5 border border-[#00d2ad]/30 rounded">Partner Panel</span>
+                            <div className="w-8 h-[3px] bg-[#B8893C] mt-1.5 mb-3" />
+                            <span className="text-[10px] font-bold text-[#B8893C] uppercase tracking-widest px-2 py-0.5 border border-[#B8893C]/30 rounded">Partner Panel</span>
                         </div>
                         <p className="text-[#94a3b8] text-xs md:text-sm leading-relaxed font-medium pt-1">
                             Manage your property, track bookings, and grow your business with NowStay Partner.
@@ -27,9 +27,9 @@ const PartnerFooter = () => {
                     <div className="space-y-4">
                         <h3 className="text-xs font-black uppercase tracking-widest text-white">Panel</h3>
                         <ul className="flex flex-col gap-2.5 text-xs md:text-sm font-medium text-[#cbd5e1]">
-                            <li><Link to="/hotel/dashboard" className="hover:text-[#00d2ad] transition-colors">Dashboard</Link></li>
-                            <li><Link to="/hotel/properties" className="hover:text-[#00d2ad] transition-colors">My Properties</Link></li>
-                            <li><Link to="/hotel/bookings" className="hover:text-[#00d2ad] transition-colors">Bookings</Link></li>
+                            <li><Link to="/hotel/dashboard" className="hover:text-[#B8893C] transition-colors">Dashboard</Link></li>
+                            <li><Link to="/hotel/properties" className="hover:text-[#B8893C] transition-colors">My Properties</Link></li>
+                            <li><Link to="/hotel/bookings" className="hover:text-[#B8893C] transition-colors">Bookings</Link></li>
                         </ul>
                     </div>
 
@@ -37,9 +37,9 @@ const PartnerFooter = () => {
                     <div className="space-y-4">
                         <h3 className="text-xs font-black uppercase tracking-widest text-white">Legal</h3>
                         <ul className="flex flex-col gap-2.5 text-xs md:text-sm font-medium text-[#cbd5e1]">
-                            <li><Link to="/hotel/terms" className="hover:text-[#00d2ad] transition-colors">Partner Agreement</Link></li>
-                            <li><Link to="/hotel/privacy" className="hover:text-[#00d2ad] transition-colors">Privacy Policy</Link></li>
-                            <li><Link to="/hotel/contact" className="hover:text-[#00d2ad] transition-colors">Contact Us</Link></li>
+                            <li><Link to="/hotel/terms" className="hover:text-[#B8893C] transition-colors">Partner Agreement</Link></li>
+                            <li><Link to="/hotel/privacy" className="hover:text-[#B8893C] transition-colors">Privacy Policy</Link></li>
+                            <li><Link to="/hotel/contact" className="hover:text-[#B8893C] transition-colors">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -48,14 +48,14 @@ const PartnerFooter = () => {
                         <h3 className="text-xs font-black uppercase tracking-widest text-white">Get In Touch</h3>
                         <div className="flex flex-col gap-2.5 text-xs md:text-sm text-[#cbd5e1]">
                             <div className="flex items-center gap-2">
-                                <span className="text-[#00d2ad] font-bold">Email:</span>
-                                <a href="mailto:Nowstayindia@gmail.com" className="hover:text-[#00d2ad] transition-colors truncate">
+                                <span className="text-[#B8893C] font-bold">Email:</span>
+                                <a href="mailto:Nowstayindia@gmail.com" className="hover:text-[#B8893C] transition-colors truncate">
                                     Nowstayindia@gmail.com
                                 </a>
                             </div>
                             <div className="flex items-center gap-2">
-                                <span className="text-[#00d2ad] font-bold">Phone:</span>
-                                <a href="tel:9970907005" className="hover:text-[#00d2ad] transition-colors">
+                                <span className="text-[#B8893C] font-bold">Phone:</span>
+                                <a href="tel:9970907005" className="hover:text-[#B8893C] transition-colors">
                                     9970907005
                                 </a>
                             </div>
@@ -65,25 +65,25 @@ const PartnerFooter = () => {
                 </div>
 
                 {/* Middle Section: Download Partner App Bar */}
-                <div className="pt-6 border-t border-[#1e293b] flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                <div className="pt-6 border-t border-[#3A332A] flex flex-col lg:flex-row lg:items-center justify-between gap-6">
                     <div>
-                        <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#00d2ad]">Download Partner App</h4>
+                        <h4 className="text-xs font-black uppercase tracking-[0.2em] text-[#B8893C]">Download Partner App</h4>
                     </div>
                     
                     <div className="flex items-center gap-3">
-                        <a href="https://play.google.com/store/apps/details?id=com.nowstay.partnerapp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#1e293b] border border-gray-700/60 hover:border-[#00d2ad] transition-all group">
+                        <a href="https://play.google.com/store/apps/details?id=com.nowstay.partnerapp" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#3A332A] border border-gray-700/60 hover:border-[#B8893C] transition-all group">
                             <img src="/WhatsApp_Image_2026-05-09_at_1.50.21_PM-removebg-preview.png" alt="Google Play" className="w-4 h-4 object-contain transition-transform group-hover:scale-110" />
-                            <span className="text-xs font-bold text-white group-hover:text-[#00d2ad] whitespace-nowrap">Google Play</span>
+                            <span className="text-xs font-bold text-white group-hover:text-[#B8893C] whitespace-nowrap">Google Play</span>
                         </a>
-                        <a href="https://apps.apple.com/in/app/nowstay-partner/id6761837073" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#1e293b] border border-gray-700/60 hover:border-[#00d2ad] transition-all group">
+                        <a href="https://apps.apple.com/in/app/nowstay-partner/id6761837073" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#3A332A] border border-gray-700/60 hover:border-[#B8893C] transition-all group">
                             <img src="/WhatsApp_Image_2026-05-11_at_12.14.22_PM-removebg-preview.png" alt="App Store" className="w-4 h-4 object-contain transition-transform group-hover:scale-110" />
-                            <span className="text-xs font-bold text-white group-hover:text-[#00d2ad] whitespace-nowrap">App Store</span>
+                            <span className="text-xs font-bold text-white group-hover:text-[#B8893C] whitespace-nowrap">App Store</span>
                         </a>
                     </div>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-6 border-t border-[#1e293b] flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                <div className="pt-6 border-t border-[#3A332A] flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
                     <p className="text-xs text-[#64748b] font-medium">
                         &copy; {new Date().getFullYear()} NowStay Partner. All rights reserved.
                     </p>

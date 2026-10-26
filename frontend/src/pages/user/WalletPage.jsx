@@ -114,7 +114,7 @@ const WalletPage = () => {
                     }
                 },
                 theme: {
-                    color: '#0F172A'
+                    color: '#2B2620'
                 }
             };
 
@@ -151,7 +151,7 @@ const WalletPage = () => {
             <Toaster position="top-center" />
 
             {/* Header / Balance Card */}
-            <div className="sticky top-0 z-10 bg-[#0F172A] px-6 pt-10 pb-8 rounded-b-[2.5rem] shadow-lg overflow-hidden">
+            <div className="sticky top-0 z-10 bg-[#2B2620] px-6 pt-10 pb-8 rounded-b-[2.5rem] shadow-lg overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full blur-3xl -mr-10 -mt-10 pointer-events-none"></div>
 
                 <h1 className="text-white text-lg font-bold mb-6 text-center">My Wallet</h1>
@@ -167,7 +167,7 @@ const WalletPage = () => {
                 <div className="mt-8">
                     <button
                         onClick={() => setShowAddMoneySheet(true)}
-                        className="w-full bg-white text-[#0F172A] py-3.5 rounded-xl font-bold text-sm shadow-xl active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                        className="w-full bg-white text-[#2B2620] py-3.5 rounded-xl font-bold text-sm shadow-xl active:scale-[0.98] transition-all flex items-center justify-center gap-2"
                     >
                         <Plus size={18} strokeWidth={3} /> Add Money
                     </button>
@@ -197,7 +197,7 @@ const WalletPage = () => {
                                 className="bg-white p-3 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer active:scale-[0.98] transition-all"
                             >
                                 <div className="flex items-center gap-3 flex-1 min-w-0 mr-3">
-                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${tx.isBooking ? 'bg-orange-50 text-orange-600' :
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center shrink-0 ${tx.isBooking ? 'bg-emerald-50 text-emerald-600' :
                                         tx.type === 'credit' ? 'bg-green-50 text-green-600' : 'bg-gray-50 text-gray-600'
                                         }`}>
                                         {tx.isBooking ? <Calendar size={18} /> :
@@ -218,7 +218,7 @@ const WalletPage = () => {
                                         {tx.type === 'credit' ? '+' : '-'}₹{tx.amount?.toLocaleString('en-IN')}
                                     </div>
                                     <span className={`text-[9px] font-bold px-2 py-0.5 rounded-full capitalize inline-block mt-0.5 ${tx.status === 'confirmed' || tx.status === 'success' ? 'bg-green-100 text-green-700' :
-                                        tx.status === 'pending' ? 'bg-yellow-100 text-yellow-700' : 'bg-gray-100 text-gray-600'
+                                        tx.status === 'pending' ? 'bg-emerald-100 text-emerald-700' : 'bg-gray-100 text-gray-600'
                                         }`}>
                                         {tx.status || 'Success'}
                                     </span>
@@ -254,7 +254,7 @@ const WalletPage = () => {
                                 </button>
                             </div>
 
-                            <div className="bg-gray-50 rounded-2xl p-4 mb-2 flex items-center gap-3 border border-gray-200 focus-within:border-[#0F172A] focus-within:ring-1 ring-[#0F172A] transition-all">
+                            <div className="bg-gray-50 rounded-2xl p-4 mb-2 flex items-center gap-3 border border-gray-200 focus-within:border-[#2B2620] focus-within:ring-1 ring-[#2B2620] transition-all">
                                 <IndianRupee size={24} className="text-gray-400" />
                                 <input
                                     type="number"
@@ -291,7 +291,7 @@ const WalletPage = () => {
                                     <button
                                         key={amt}
                                         onClick={() => setAddAmount(String(amt))}
-                                        className="px-4 py-2 rounded-xl border border-gray-200 text-sm font-bold text-gray-600 hover:bg-[#0F172A] hover:text-white hover:border-[#0F172A] transition-all whitespace-nowrap"
+                                        className="px-4 py-2 rounded-xl border border-gray-200 text-sm font-bold text-gray-600 hover:bg-[#2B2620] hover:text-white hover:border-[#2B2620] transition-all whitespace-nowrap"
                                     >
                                         +₹{amt}
                                     </button>
@@ -304,7 +304,7 @@ const WalletPage = () => {
                                 className={`w-full py-4 rounded-xl font-bold text-lg shadow-lg active:scale-[0.98] transition-all flex items-center justify-center gap-2
                                     ${(!addAmount || Number(addAmount) < 10)
                                         ? 'bg-gray-200 text-gray-400 cursor-not-allowed shadow-none'
-                                        : 'bg-[#0F172A] text-white shadow-[#0F172A]/20'
+                                        : 'bg-[#2B2620] text-white shadow-[#2B2620]/20'
                                     }`}
                             >
                                 {processing && <Loader2 size={20} className="animate-spin" />}
@@ -340,7 +340,7 @@ const WalletPage = () => {
                                     }`}>
                                     {selectedTransaction.type === 'credit' ? <ArrowDownLeft size={28} /> : <ArrowUpRight size={28} />}
                                 </div>
-                                <h3 className="text-xl font-black text-[#003836] text-center leading-tight mb-1">
+                                <h3 className="text-xl font-black text-[#2B2620] text-center leading-tight mb-1">
                                     {selectedTransaction.type === 'credit' ? '+' : '-'}₹{selectedTransaction.amount?.toLocaleString('en-IN')}
                                 </h3>
                                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{selectedTransaction.status || 'Success'}</p>
@@ -369,7 +369,7 @@ const WalletPage = () => {
                                 {selectedTransaction.bookingId && (
                                     <div className="flex justify-between items-center bg-white/50 p-2 rounded-lg border border-gray-100">
                                         <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Reference</span>
-                                        <span className="text-[10px] font-bold text-[#0F172A] bg-[#0F172A]/5 px-2 py-0.5 rounded">
+                                        <span className="text-[10px] font-bold text-[#2B2620] bg-[#2B2620]/5 px-2 py-0.5 rounded">
                                             #{selectedTransaction.bookingId}
                                         </span>
                                     </div>

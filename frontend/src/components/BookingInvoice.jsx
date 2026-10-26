@@ -72,7 +72,7 @@ const BookingInvoice = ({ booking, property, room, user, taxRate: taxRateProp })
             {/* Header / Letterhead */}
             <div className="flex flex-col sm:flex-row justify-between items-start mb-8 gap-6 sm:gap-0">
                 <div className="w-full sm:w-auto">
-                    <h2 className="text-sm font-black text-blue-900 uppercase tracking-widest mb-1">TAX INVOICE</h2>
+                    <h2 className="text-sm font-black text-emerald-900 uppercase tracking-widest mb-1">TAX INVOICE</h2>
                     <h1 className="text-3xl font-black text-gray-900 uppercase tracking-tighter mb-2">
                         {property.propertyName || property.name}
                     </h1>
@@ -107,8 +107,8 @@ const BookingInvoice = ({ booking, property, room, user, taxRate: taxRateProp })
             </div>
 
             {/* Customer & Stay Details Boxes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 mb-8 border border-blue-900">
-                <div className="border-r border-blue-900">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-0 mb-8 border border-emerald-900">
+                <div className="border-r border-emerald-900">
                     <h3
                         className="inv-header-bg px-3 py-1 text-[10px] font-bold uppercase tracking-widest"
                         style={{ backgroundColor: '#1e3a8a', color: '#ffffff' }}
@@ -140,17 +140,17 @@ const BookingInvoice = ({ booking, property, room, user, taxRate: taxRateProp })
 
             {/* Main Grid Table */}
             <div className="overflow-x-auto mb-0">
-                <table className="w-full border-collapse border border-blue-900">
+                <table className="w-full border-collapse border border-emerald-900">
                     <thead>
                         <tr
                             className="inv-header-bg uppercase text-[9px] sm:text-[10px] tracking-widest"
                             style={{ backgroundColor: '#1e3a8a', color: '#ffffff' }}
                         >
-                            <th className="border border-blue-900 px-4 py-2 text-left w-2/5">DESCRIPTION</th>
-                            <th className="border border-blue-900 px-4 py-2 text-center">QTY</th>
-                            <th className="border border-blue-900 px-4 py-2 text-right">UNIT PRICE</th>
-                            <th className="border border-blue-900 px-4 py-2 text-right">TAX</th>
-                            <th className="border border-blue-900 px-4 py-2 text-right">TOTAL</th>
+                            <th className="border border-emerald-900 px-4 py-2 text-left w-2/5">DESCRIPTION</th>
+                            <th className="border border-emerald-900 px-4 py-2 text-center">QTY</th>
+                            <th className="border border-emerald-900 px-4 py-2 text-right">UNIT PRICE</th>
+                            <th className="border border-emerald-900 px-4 py-2 text-right">TAX</th>
+                            <th className="border border-emerald-900 px-4 py-2 text-right">TOTAL</th>
                         </tr>
                     </thead>
                     <tbody className="text-xs sm:text-sm">
@@ -162,7 +162,7 @@ const BookingInvoice = ({ booking, property, room, user, taxRate: taxRateProp })
                             <td className="border border-gray-300 px-4 py-3 text-center font-bold">{booking.totalNights}</td>
                             <td className="border border-gray-300 px-4 py-3 text-right">₹{booking.baseAmount?.toLocaleString()}</td>
                             <td className="border border-gray-300 px-4 py-3 text-right">₹{booking.taxes?.toLocaleString()}</td>
-                            <td className="border border-gray-300 px-4 py-3 text-right font-black text-blue-900">₹{booking.totalAmount?.toLocaleString()}</td>
+                            <td className="border border-gray-300 px-4 py-3 text-right font-black text-emerald-900">₹{booking.totalAmount?.toLocaleString()}</td>
                         </tr>
 
                     </tbody>

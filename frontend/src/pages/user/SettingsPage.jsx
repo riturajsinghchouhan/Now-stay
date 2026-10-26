@@ -173,7 +173,7 @@ const SettingsPage = () => {
                         <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
                             <div className="flex items-center justify-between p-5 border-b border-gray-50 last:border-0">
                                 <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
+                                    <div className="w-10 h-10 rounded-full bg-emerald-50 flex items-center justify-center text-emerald-600">
                                         <Bell size={20} />
                                     </div>
                                     <div className="text-left">

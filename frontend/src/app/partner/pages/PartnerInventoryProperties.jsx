@@ -51,7 +51,7 @@ const PartnerInventoryProperties = () => {
           <button
             onClick={fetchProperties}
             disabled={loading}
-            className="inline-flex items-center justify-center p-1.5 rounded-full bg-white border border-gray-200 text-gray-400 hover:text-[#0F172A] hover:border-[#0F172A] transition-all shadow-sm active:scale-95 disabled:opacity-50"
+            className="inline-flex items-center justify-center p-1.5 rounded-full bg-white border border-gray-200 text-gray-400 hover:text-[#2B2620] hover:border-[#2B2620] transition-all shadow-sm active:scale-95 disabled:opacity-50"
             title="Refresh Properties"
           >
             <RotateCw size={14} className={loading ? 'animate-spin' : ''} />

@@ -6,8 +6,8 @@ import { legalService } from '../../../services/apiService';
 
 const Section = ({ title, children }) => (
     <div className="mb-8">
-        <h4 className="font-bold text-[#003836] mb-2 flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#0F172A]"></span>
+        <h4 className="font-bold text-[#2B2620] mb-2 flex items-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2B2620]"></span>
             {title}
         </h4>
         <div className="text-xs text-gray-500 leading-relaxed pl-3.5 border-l border-gray-100">
@@ -65,7 +65,7 @@ const PartnerTerms = () => {
                             <Shield size={24} />
                         </div>
                         <div>
-                            <h2 className="text-lg font-black text-[#003836]">
+                            <h2 className="text-lg font-black text-[#2B2620]">
                                 {page?.title || 'Partner Agreement'}
                             </h2>
                             <p className="text-xs text-gray-400">Last updated: August 15, 2024</p>

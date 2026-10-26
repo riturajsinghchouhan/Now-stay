@@ -1665,7 +1665,7 @@ const AddHomestayWizard = () => {
                   <div className="relative">
                     <input
                       type="time"
-                      className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#004F4D] focus:ring-2 focus:ring-[#004F4D]/10 transition-all ${propertyForm.checkInTime ? 'text-[#003836]' : 'text-transparent'}`}
+                      className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#4F5338] focus:ring-2 focus:ring-[#4F5338]/10 transition-all ${propertyForm.checkInTime ? 'text-[#2B2620]' : 'text-transparent'}`}
                       value={propertyForm.checkInTime}
                       onChange={e => updatePropertyForm('checkInTime', e.target.value)}
                       onClick={(e) => e.target.showPicker?.()}
@@ -1679,7 +1679,7 @@ const AddHomestayWizard = () => {
                   <div className="relative">
                     <input
                       type="time"
-                      className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#004F4D] focus:ring-2 focus:ring-[#004F4D]/10 transition-all ${propertyForm.checkOutTime ? 'text-[#003836]' : 'text-transparent'}`}
+                      className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#4F5338] focus:ring-2 focus:ring-[#4F5338]/10 transition-all ${propertyForm.checkOutTime ? 'text-[#2B2620]' : 'text-transparent'}`}
                       value={propertyForm.checkOutTime}
                       onChange={e => updatePropertyForm('checkOutTime', e.target.value)}
                       onClick={(e) => e.target.showPicker?.()}

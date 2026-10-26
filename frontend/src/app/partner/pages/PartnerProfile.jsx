@@ -25,7 +25,7 @@ const Field = ({ label, value, icon: Icon, isEditing, onChange, error }) => {
                         ? 'bg-white border-red-500 ring-4 ring-red-500/5' 
                         : isValid
                             ? 'bg-white border-emerald-500 ring-4 ring-emerald-500/5'
-                            : 'bg-white border-[#0F172A] ring-4 ring-[#0F172A]/5 shadow-inner' 
+                            : 'bg-white border-[#2B2620] ring-4 ring-[#2B2620]/5 shadow-inner' 
                     : 'bg-gray-50/50 border-gray-100 hover:border-gray-200'
             }`}>
                 <div className={`w-10 h-10 rounded-xl flex items-center justify-center transition-colors ${
@@ -34,7 +34,7 @@ const Field = ({ label, value, icon: Icon, isEditing, onChange, error }) => {
                             ? 'bg-red-500 text-white' 
                             : isValid
                                 ? 'bg-emerald-500 text-white'
-                                : 'bg-[#0F172A] text-white' 
+                                : 'bg-[#2B2620] text-white' 
                         : 'bg-white text-gray-400 shadow-sm'
                 }`}>
                     <Icon size={18} />
@@ -45,11 +45,11 @@ const Field = ({ label, value, icon: Icon, isEditing, onChange, error }) => {
                     value={value}
                     onChange={onChange}
                     maxLength={label.toLowerCase().includes('phone') ? 10 : undefined}
-                    className="flex-1 bg-transparent text-sm font-bold text-[#003836] focus:outline-none placeholder:text-gray-300"
+                    className="flex-1 bg-transparent text-sm font-bold text-[#2B2620] focus:outline-none placeholder:text-gray-300"
                     placeholder={`Enter ${label}`}
                 />
             ) : (
-                <span className="flex-1 text-sm font-bold text-[#003836]">{value || 'Not set'}</span>
+                <span className="flex-1 text-sm font-bold text-[#2B2620]">{value || 'Not set'}</span>
             )}
         </div>
         {isEditing && error && (
@@ -433,7 +433,7 @@ const PartnerProfile = () => {
                 {/* Avatar Section */}
                 <div className="text-center mb-10 relative">
                     <div className="relative inline-block">
-                        <div className="w-28 h-28 bg-[#0F172A] text-white rounded-full flex items-center justify-center text-4xl font-black mx-auto shadow-2xl shadow-[#0F172A]/30 relative border-4 border-white overflow-hidden bg-gradient-to-br from-[#0F172A] to-[#006b68]">
+                        <div className="w-28 h-28 bg-[#2B2620] text-white rounded-full flex items-center justify-center text-4xl font-black mx-auto shadow-2xl shadow-[#2B2620]/30 relative border-4 border-white overflow-hidden bg-gradient-to-br from-[#2B2620] to-[#006b68]">
                             {uploading ? (
                                 <div className="flex flex-col items-center gap-2">
                                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-white"></div>
@@ -457,7 +457,7 @@ const PartnerProfile = () => {
                                 }
                             }}
                             disabled={uploading}
-                            className="absolute bottom-1 right-1 w-9 h-9 bg-white text-[#0F172A] rounded-full flex items-center justify-center shadow-lg border border-gray-100 hover:scale-110 active:scale-95 transition-all z-10 cursor-pointer"
+                            className="absolute bottom-1 right-1 w-9 h-9 bg-white text-[#2B2620] rounded-full flex items-center justify-center shadow-lg border border-gray-100 hover:scale-110 active:scale-95 transition-all z-10 cursor-pointer"
                         >
                             <Camera size={18} />
                         </button>
@@ -473,7 +473,7 @@ const PartnerProfile = () => {
                     />
 
                     <div className="mt-4">
-                        <h2 className="text-2xl font-black text-[#003836]">{profile.name || 'Partner'}</h2>
+                        <h2 className="text-2xl font-black text-[#2B2620]">{profile.name || 'Partner'}</h2>
                         <div className="flex items-center justify-center gap-2 mt-1.5">
                             <span className={`text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full ${statusClass}`}>
                                 {statusLabel}
@@ -486,8 +486,8 @@ const PartnerProfile = () => {
                 <div className="bg-white p-6 pb-10 rounded-[2.5rem] shadow-xl shadow-gray-200/50 border border-gray-100 mb-6 transition-all duration-500">
                     <div className="flex items-center justify-between mb-10 pb-4 border-b border-gray-50">
                         <div>
-                            <p className="text-[10px] text-[#0F172A] font-black uppercase tracking-[0.2em] mb-1">Account & Settings</p>
-                            <h3 className="text-xl font-black text-[#003836]">Personal Profile</h3>
+                            <p className="text-[10px] text-[#2B2620] font-black uppercase tracking-[0.2em] mb-1">Account & Settings</p>
+                            <h3 className="text-xl font-black text-[#2B2620]">Personal Profile</h3>
                         </div>
                         <button
                             onClick={handleToggleEdit}
@@ -495,7 +495,7 @@ const PartnerProfile = () => {
                             className={`flex items-center gap-2 px-5 py-2.5 rounded-2xl font-bold text-sm transition-all shadow-lg active:scale-95 ${isEditing
                                 ? Object.keys(errors).length > 0 
                                     ? 'bg-gray-300 text-gray-500 cursor-not-allowed grayscale' 
-                                    : 'bg-[#0F172A] text-white shadow-[#0F172A]/20'
+                                    : 'bg-[#2B2620] text-white shadow-[#2B2620]/20'
                                 : 'bg-gray-50 text-gray-600 hover:bg-gray-100'
                                 }`}
                         >
@@ -529,7 +529,7 @@ const PartnerProfile = () => {
                     />
                     
                     <div className="mt-8 mb-4">
-                        <p className="text-[10px] text-[#0F172A] font-black uppercase tracking-[0.2em]">Identity Details</p>
+                        <p className="text-[10px] text-[#2B2620] font-black uppercase tracking-[0.2em]">Identity Details</p>
                     </div>
 
                     {/* Non-Editable Fields */}
@@ -551,16 +551,16 @@ const PartnerProfile = () => {
 
                 {/* My Property Types Section */}
                 <div className="mb-6">
-                    <h3 className="font-bold text-[#0F172A] text-[10px] uppercase tracking-[0.2em] mb-3 ml-2">My Property Types</h3>
+                    <h3 className="font-bold text-[#2B2620] text-[10px] uppercase tracking-[0.2em] mb-3 ml-2">My Property Types</h3>
                     <div className="bg-white p-6 rounded-[2.5rem] shadow-xl shadow-gray-200/50 border border-gray-100">
                         <div className="flex items-center justify-between mb-4">
                             <div>
-                                <p className="text-sm font-black text-[#003836]">Listed Property Types</p>
+                                <p className="text-sm font-black text-[#2B2620]">Listed Property Types</p>
                                 <p className="text-[10px] text-gray-400 font-medium mt-0.5">Subscription plans will match these types</p>
                             </div>
                             <button
                                 onClick={() => setShowTypeSelector(true)}
-                                className="flex items-center gap-1.5 px-4 py-2 bg-[#0F172A] text-white rounded-xl text-xs font-black hover:bg-[#003836] transition-all active:scale-95"
+                                className="flex items-center gap-1.5 px-4 py-2 bg-[#2B2620] text-white rounded-xl text-xs font-black hover:bg-[#2B2620] transition-all active:scale-95"
                             >
                                 <Plus size={14} />
                                 Manage
@@ -601,7 +601,7 @@ const PartnerProfile = () => {
                                 exit={{ opacity: 0 }}
                                 className="fixed inset-0 z-[99999] flex items-center justify-center p-2.5 sm:p-6"
                             >
-                                <div className="absolute inset-0 bg-[#0F172A]/80 backdrop-blur-sm" onClick={() => setShowTypeSelector(false)} />
+                                <div className="absolute inset-0 bg-[#2B2620]/80 backdrop-blur-sm" onClick={() => setShowTypeSelector(false)} />
                                 <motion.div
                                     initial={{ opacity: 0, scale: 0.95, y: 20 }}
                                     animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -628,7 +628,7 @@ const PartnerProfile = () => {
                                         <button
                                             onClick={() => handleSavePropertyTypes(preferredTypes)}
                                             disabled={savingTypes}
-                                            className="w-full bg-[#0F172A] text-white font-black py-4 rounded-2xl shadow-xl shadow-[#0F172A]/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-60"
+                                            className="w-full bg-[#2B2620] text-white font-black py-4 rounded-2xl shadow-xl shadow-[#2B2620]/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-60"
                                         >
                                             {savingTypes ? <Loader2 size={18} className="animate-spin" /> : <><CheckCircle2 size={18} /><span>Save {preferredTypes.length > 0 ? `(${preferredTypes.length} selected)` : ''}</span></>}
                                         </button>
@@ -680,7 +680,7 @@ const PartnerProfile = () => {
                                     <div className="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center mb-6 border-2 border-red-100/50">
                                         <AlertTriangle size={36} className="text-red-500" />
                                     </div>
-                                    <h3 className="text-2xl font-black text-[#003836] mb-2 uppercase tracking-tight">
+                                    <h3 className="text-2xl font-black text-[#2B2620] mb-2 uppercase tracking-tight">
                                         {showOtpStep ? 'Verify OTP' : 'Delete Account?'}
                                     </h3>
                                     
@@ -695,7 +695,7 @@ const PartnerProfile = () => {
                                                     value={deletionReason}
                                                     onChange={(e) => setDeletionReason(e.target.value)}
                                                     placeholder="Tell us why you want to delete your account..."
-                                                    className="w-full p-4 rounded-2xl bg-gray-50 border border-gray-100 text-sm font-bold text-[#003836] focus:outline-none focus:ring-4 focus:ring-red-500/10 focus:border-red-500/30 transition-all resize-none h-24"
+                                                    className="w-full p-4 rounded-2xl bg-gray-50 border border-gray-100 text-sm font-bold text-[#2B2620] focus:outline-none focus:ring-4 focus:ring-red-500/10 focus:border-red-500/30 transition-all resize-none h-24"
                                                 />
                                             </div>
                                             <div className="flex flex-col w-full gap-3">
@@ -718,7 +718,7 @@ const PartnerProfile = () => {
                                     ) : (
                                         <>
                                             <p className="text-sm font-medium text-gray-500 leading-relaxed mb-6">
-                                                Please enter the verification OTP sent to your registered email: <span className="font-bold text-[#0F172A]">{profile.email}</span>
+                                                Please enter the verification OTP sent to your registered email: <span className="font-bold text-[#2B2620]">{profile.email}</span>
                                                 {isTestUser && (
                                                     <span className="block mt-2 text-emerald-600 font-extrabold text-xs uppercase tracking-wider bg-emerald-50 py-1.5 px-3 rounded-xl border border-emerald-100">
                                                         🧪 Test Mode OTP: 1234
@@ -732,14 +732,14 @@ const PartnerProfile = () => {
                                                     value={deletionOtp}
                                                     onChange={(e) => setDeletionOtp(e.target.value.replace(/\D/g, ''))}
                                                     placeholder="0000"
-                                                    className="w-full text-center text-3xl font-black tracking-[0.5em] p-4 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#0F172A]/5 focus:border-[#0F172A]/20 transition-all"
+                                                    className="w-full text-center text-3xl font-black tracking-[0.5em] p-4 rounded-2xl bg-gray-50 border border-gray-100 focus:outline-none focus:ring-4 focus:ring-[#2B2620]/5 focus:border-[#2B2620]/20 transition-all"
                                                 />
                                             </div>
                                             <div className="flex flex-col w-full gap-3">
                                                 <button
                                                     onClick={handleVerifyDeletion}
                                                     disabled={deleteLoading}
-                                                    className="w-full bg-[#0F172A] text-white font-black py-4.5 rounded-[1.5rem] shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 text-sm uppercase tracking-widest"
+                                                    className="w-full bg-[#2B2620] text-white font-black py-4.5 rounded-[1.5rem] shadow-xl active:scale-95 transition-all flex items-center justify-center gap-2 disabled:opacity-70 text-sm uppercase tracking-widest"
                                                 >
                                                     {deleteLoading ? <Loader2 size={18} className="animate-spin" /> : 'Permanently Delete'}
                                                 </button>

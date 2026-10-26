@@ -61,7 +61,7 @@ const PropertyTypeFilter = ({ selectedType, onSelectType }) => {
   }, []);
 
   return (
-    <div className="flex gap-4 overflow-x-auto px-5 py-4 no-scrollbar scroll-smooth">
+    <div className="flex gap-2.5 overflow-x-auto px-5 py-3 no-scrollbar scroll-smooth">
       {types.map((type) => {
         const Icon = type.icon || Building2;
         const isSelected = selectedType === type.id;
@@ -70,25 +70,14 @@ const PropertyTypeFilter = ({ selectedType, onSelectType }) => {
           <button
             key={type.id}
             onClick={() => onSelectType(type.id)}
-            className="flex flex-col items-center gap-1.5 min-w-[56px] group outline-none transition-all duration-300"
+            className={`flex items-center gap-2 shrink-0 px-4 py-2.5 rounded-full border text-sm font-semibold outline-none transition-all active:scale-95 ${
+              isSelected
+                ? 'bg-teal-700 border-teal-700 text-white shadow-md'
+                : 'bg-[#FFFDF8] border-emerald-100 text-slate-600 hover:border-emerald-300'
+            }`}
           >
-            <div className={`
-              w-12 h-12 rounded-2xl flex items-center justify-center shadow-sm
-              transition-all duration-300 transform active:scale-95
-              ${isSelected
-                ? 'bg-surface text-white scale-105 shadow-md'
-                : 'bg-white text-surface/60 hover:bg-gray-50'
-              }
-            `}>
-              <Icon size={20} strokeWidth={isSelected ? 2 : 1.5} />
-            </div>
-
-            <span className={`
-              text-[10px] font-medium transition-colors leading-tight truncate max-w-[64px]
-              ${isSelected ? 'text-surface font-bold' : 'text-surface/60'}
-            `}>
-              {type.label}
-            </span>
+            <Icon size={16} strokeWidth={isSelected ? 2.2 : 1.8} />
+            {type.label}
           </button>
         );
       })}

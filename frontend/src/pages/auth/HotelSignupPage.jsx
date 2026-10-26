@@ -168,28 +168,28 @@ const HotelSignup = () => {
     };
 
     return (
-        <div className="h-screen overflow-hidden bg-white text-[#003836] flex flex-col font-sans selection:bg-[#0F172A] selection:text-white">
+        <div className="h-screen overflow-hidden bg-white text-[#2B2620] flex flex-col font-sans selection:bg-[#2B2620] selection:text-white">
             {/* Top Bar */}
             <header className="absolute top-0 left-0 right-0 h-16 bg-white/80 backdrop-blur-md z-50 px-4 flex items-center justify-between border-b border-gray-100">
                 <button
                     onClick={handleBack}
                     className={`p-2 rounded-full transition-colors hover:bg-gray-100`}
                 >
-                    <ArrowLeft size={20} className="text-[#003836]" />
+                    <ArrowLeft size={20} className="text-[#2B2620]" />
                 </button>
                 <div className="flex flex-col items-center">
                     <span className="text-xs font-bold text-gray-400 tracking-widest uppercase">Step {currentStep} of {steps.length}</span>
-                    <span className="text-xs md:text-sm font-bold text-[#003836] truncate">{steps[currentStepIndex]?.title}</span>
+                    <span className="text-xs md:text-sm font-bold text-[#2B2620] truncate">{steps[currentStepIndex]?.title}</span>
                 </div>
                 <button onClick={() => navigate('/hotel/login')} className="p-2 rounded-full hover:bg-gray-100 transition-colors">
-                    <X size={20} className="text-[#003836]" />
+                    <X size={20} className="text-[#2B2620]" />
                 </button>
             </header>
 
             {/* Progress Bar */}
             <div className="absolute top-16 left-0 right-0 z-40 bg-gray-100 h-1">
                 <div
-                    className="h-full bg-[#0F172A] transition-all duration-500 ease-out"
+                    className="h-full bg-[#2B2620] transition-all duration-500 ease-out"
                     style={{ width: `${progress}%` }}
                 />
             </div>
@@ -213,7 +213,7 @@ const HotelSignup = () => {
                                     Already have a partner account?{' '}
                                     <button
                                         onClick={() => navigate('/hotel/login')}
-                                        className="text-[#0F172A] font-bold hover:underline"
+                                        className="text-[#2B2620] font-bold hover:underline"
                                     >
                                         Login Here
                                     </button>
@@ -230,7 +230,7 @@ const HotelSignup = () => {
                     <div className="flex items-center gap-2">
                         <button
                             onClick={handleBack}
-                            className={`text-xs font-bold underline px-3 py-2 transition-colors ${loading ? 'text-gray-200 cursor-not-allowed' : 'text-gray-400 hover:text-[#0F172A]'}`}
+                            className={`text-xs font-bold underline px-3 py-2 transition-colors ${loading ? 'text-gray-200 cursor-not-allowed' : 'text-gray-400 hover:text-[#2B2620]'}`}
                             disabled={loading}
                         >
                             Back
@@ -241,7 +241,7 @@ const HotelSignup = () => {
                         <button
                             onClick={handleNext}
                             disabled={loading}
-                            className={`bg-[#0F172A] text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-lg active:scale-95 transition-all flex items-center gap-2 w-full md:w-auto justify-center ${loading ? 'opacity-75 cursor-not-allowed' : ''}`}
+                            className={`bg-[#2B2620] text-white px-8 py-3.5 rounded-full font-bold text-sm shadow-lg active:scale-95 transition-all flex items-center gap-2 w-full md:w-auto justify-center ${loading ? 'opacity-75 cursor-not-allowed' : ''}`}
                         >
                             {loading ? (
                                 <>Processing...</>

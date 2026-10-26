@@ -193,7 +193,7 @@ const UserLogin = () => {
         }
     };
     return (
-        <div className="min-h-screen bg-emerald-100 flex items-center justify-center p-6">
+        <div className="min-h-screen bg-background flex items-center justify-center p-6">
             {/* Background Pattern */}
             <div className="absolute inset-0 bg-grid-pattern opacity-5 pointer-events-none"></div>
 

@@ -69,14 +69,14 @@ const PartnerHeader = ({ title, subtitle, showMenu = true }) => {
                                 onClick={() => setIsSidebarOpen(true)}
                                 className="p-1.5 rounded-full bg-white hover:bg-gray-100 transition shadow-sm border border-gray-100 active:scale-95 shrink-0"
                             >
-                                <Menu size={18} className="text-[#003836]" />
+                                <Menu size={18} className="text-[#2B2620]" />
                             </button>
                         ) : (
                             <button
                                 onClick={() => navigate(-1)}
                                 className="p-1.5 rounded-full bg-white hover:bg-gray-100 transition shadow-sm border border-gray-100 active:scale-95 shrink-0"
                             >
-                                <ChevronLeft size={18} className="text-[#003836]" />
+                                <ChevronLeft size={18} className="text-[#2B2620]" />
                             </button>
                         )
                     ) : (
@@ -84,7 +84,7 @@ const PartnerHeader = ({ title, subtitle, showMenu = true }) => {
                             onClick={() => navigate(-1)}
                             className="p-1.5 rounded-full bg-white hover:bg-gray-100 transition shadow-sm border border-gray-100 active:scale-95 shrink-0"
                         >
-                            <ChevronLeft size={18} className="text-[#003836]" />
+                            <ChevronLeft size={18} className="text-[#2B2620]" />
                         </button>
                     )}
 
@@ -97,7 +97,7 @@ const PartnerHeader = ({ title, subtitle, showMenu = true }) => {
                             onClick={() => navigate('/hotel/notifications')}
                             className="relative p-1.5 rounded-full bg-white hover:bg-gray-100 transition shadow-sm border border-gray-100 active:scale-95"
                         >
-                            <Bell size={18} className="text-[#003836]" />
+                            <Bell size={18} className="text-[#2B2620]" />
                             {unreadCount > 0 && (
                                 <span className="absolute top-0 right-0 w-2.5 h-2.5 bg-red-500 rounded-full border-2 border-white"></span>
                             )}
@@ -107,12 +107,12 @@ const PartnerHeader = ({ title, subtitle, showMenu = true }) => {
                             onClick={() => navigate('/hotel/wallet')}
                             className="flex items-center gap-1.5 px-2 py-1 rounded-full bg-white border border-gray-100 shadow-sm active:scale-95 transition-transform"
                         >
-                            <div className="w-5 h-5 bg-[#0F172A] rounded-full flex items-center justify-center shrink-0">
+                            <div className="w-5 h-5 bg-[#2B2620] rounded-full flex items-center justify-center shrink-0">
                                 <Wallet size={10} className="text-white" />
                             </div>
                             <div className="flex flex-col items-start leading-none sm:mr-0.5">
                                 <span className="hidden sm:inline text-[8px] font-bold text-gray-400 uppercase tracking-wide mb-0.5">Wallet</span>
-                                <span className="text-[9px] sm:text-[10px] font-bold text-[#003836]">
+                                <span className="text-[9px] sm:text-[10px] font-bold text-[#2B2620]">
                                     {new Intl.NumberFormat('en-IN', {
                                         style: 'currency',
                                         currency: 'INR',

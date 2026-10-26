@@ -56,7 +56,7 @@ const AboutPage = () => {
 
       <div className="px-5 -mt-6 relative z-10 pb-24">
         {error && (
-          <div className="mb-4 bg-amber-50 border border-amber-200 text-amber-800 text-xs rounded-xl px-4 py-2">
+          <div className="mb-4 bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs rounded-xl px-4 py-2">
             {error}
           </div>
         )}

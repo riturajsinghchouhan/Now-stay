@@ -96,7 +96,7 @@ const AdminDashboard = () => {
     const [recentRequests, setRecentRequests] = useState([]);
     const [recentSubscriptions, setRecentSubscriptions] = useState([]);
 
-    const COLORS = ['#10B981', '#3B82F6', '#F59E0B', '#EF4444', '#6366F1'];
+    const COLORS = ['#B8893C', '#3B82F6', '#F59E0B', '#EF4444', '#6366F1'];
 
     useEffect(() => {
         fetchDashboardData();
@@ -247,8 +247,8 @@ const AdminDashboard = () => {
                                 <AreaChart data={charts.revenue}>
                                     <defs>
                                         <linearGradient id="colorBookings" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="5%" stopColor="#10B981" stopOpacity={0.1} />
-                                            <stop offset="95%" stopColor="#10B981" stopOpacity={0} />
+                                            <stop offset="5%" stopColor="#B8893C" stopOpacity={0.1} />
+                                            <stop offset="95%" stopColor="#B8893C" stopOpacity={0} />
                                         </linearGradient>
                                         <linearGradient id="colorSubs" x1="0" y1="0" x2="0" y2="1">
                                             <stop offset="5%" stopColor="#2563eb" stopOpacity={0.1} />
@@ -277,7 +277,7 @@ const AdminDashboard = () => {
                                     <Area
                                         type="monotone"
                                         dataKey="bookings"
-                                        stroke="#10B981"
+                                        stroke="#B8893C"
                                         strokeWidth={3}
                                         fillOpacity={1}
                                         fill="url(#colorBookings)"

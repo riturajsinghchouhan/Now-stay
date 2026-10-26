@@ -121,8 +121,8 @@ const NotificationsPage = () => {
     const getColor = (type) => {
         switch (type) {
             case 'booking': return "bg-green-100 text-green-600";
-            case 'offer': return "bg-purple-100 text-purple-600";
-            default: return "bg-blue-100 text-blue-600";
+            case 'offer': return "bg-emerald-100 text-emerald-600";
+            default: return "bg-emerald-100 text-emerald-600";
         }
     };
 

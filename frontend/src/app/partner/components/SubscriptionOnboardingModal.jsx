@@ -65,7 +65,7 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
               <div className="relative px-6 py-5 border-b border-gray-100 flex justify-between items-center bg-gradient-to-b from-gray-50 to-white">
                 <div>
                   <h3 className="text-lg md:text-xl font-black text-gray-900 tracking-tight flex items-center gap-2">
-                    <Sparkles className="text-amber-500 fill-amber-100 animate-pulse" size={20} />
+                    <Sparkles className="text-emerald-500 fill-amber-100 animate-pulse" size={20} />
                     Choose Your Partner Plan
                   </h3>
                   <p className="text-xs text-gray-500 mt-1 font-medium">Select the business model that fits your goals before submitting.</p>
@@ -87,18 +87,18 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                     onClick={() => setSelectedPlan('subscription')}
                     className={`p-4 rounded-2xl border-2 cursor-pointer transition-all duration-300 flex items-center justify-between relative overflow-hidden ${
                       selectedPlan === 'subscription' 
-                        ? 'border-amber-400 bg-amber-50/15 shadow-[0_8px_20px_-6px_rgba(245,158,11,0.15)]' 
+                        ? 'border-emerald-400 bg-emerald-50/15 shadow-[0_8px_20px_-6px_rgba(184,137,60,0.15)]' 
                         : 'border-gray-200 bg-white hover:border-gray-300'
                     }`}
                   >
-                    <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[7px] font-black px-2.5 py-0.5 rounded-bl-lg tracking-wider uppercase shadow-sm">
+                    <div className="absolute top-0 right-0 bg-gradient-to-r from-emerald-500 to-emerald-500 text-white text-[7px] font-black px-2.5 py-0.5 rounded-bl-lg tracking-wider uppercase shadow-sm">
                       RECOMMENDED
                     </div>
                     <div className="flex items-center gap-3.5">
                       <div className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
                         selectedPlan === 'subscription'
-                          ? 'bg-gradient-to-r from-amber-500 to-orange-500 text-white shadow-md shadow-amber-500/25'
-                          : 'bg-amber-50 text-amber-500 border border-amber-100'
+                          ? 'bg-gradient-to-r from-emerald-500 to-emerald-500 text-white shadow-md shadow-emerald-500/25'
+                          : 'bg-emerald-50 text-emerald-500 border border-emerald-100'
                       }`}>
                         <Crown size={20} />
                       </div>
@@ -110,7 +110,7 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                     <div className="flex items-center pr-1">
                       <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
                         selectedPlan === 'subscription'
-                          ? 'border-amber-500 bg-amber-500 text-white shadow-sm'
+                          ? 'border-emerald-500 bg-emerald-500 text-white shadow-sm'
                           : 'border-gray-300 bg-white'
                       }`}>
                         {selectedPlan === 'subscription' && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
@@ -124,14 +124,14 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                     onClick={() => setSelectedPlan('commission')}
                     className={`p-4 rounded-2xl border-2 cursor-pointer transition-all duration-300 flex items-center justify-between ${
                       selectedPlan === 'commission' 
-                        ? 'border-[#003836] bg-[#003836]/5 shadow-[0_8px_20px_-6px_rgba(0,56,54,0.1)]' 
+                        ? 'border-[#2B2620] bg-[#2B2620]/5 shadow-[0_8px_20px_-6px_rgba(0,56,54,0.1)]' 
                         : 'border-gray-200 bg-white hover:border-gray-300'
                     }`}
                   >
                     <div className="flex items-center gap-3.5">
                       <div className={`w-11 h-11 rounded-xl flex items-center justify-center transition-all duration-300 ${
                         selectedPlan === 'commission'
-                          ? 'bg-[#003836] text-white shadow-md shadow-[#003836]/20'
+                          ? 'bg-[#2B2620] text-white shadow-md shadow-[#2B2620]/20'
                           : 'bg-teal-50 text-teal-600 border border-teal-100'
                       }`}>
                         <Percent size={20} />
@@ -144,7 +144,7 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                     <div className="flex items-center pr-1">
                       <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all duration-300 ${
                         selectedPlan === 'commission'
-                          ? 'border-[#003836] bg-[#003836] text-white shadow-sm'
+                          ? 'border-[#2B2620] bg-[#2B2620] text-white shadow-sm'
                           : 'border-gray-300 bg-white'
                       }`}>
                         {selectedPlan === 'commission' && <div className="w-1.5 h-1.5 rounded-full bg-white" />}
@@ -167,15 +167,15 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                         className="space-y-2.5"
                       >
                         <li className="flex items-center gap-2 text-xs font-semibold text-gray-700">
-                          <span className="text-amber-500 font-bold shrink-0 text-sm">✓</span>
+                          <span className="text-emerald-500 font-bold shrink-0 text-sm">✓</span>
                           <span><strong className="text-gray-900">0% Commission</strong> on all bookings</span>
                         </li>
                         <li className="flex items-center gap-2 text-xs font-semibold text-gray-700">
-                          <span className="text-amber-500 font-bold shrink-0 text-sm">✓</span>
+                          <span className="text-emerald-500 font-bold shrink-0 text-sm">✓</span>
                           <span><strong className="text-gray-900">Verified Badge</strong> on your listing</span>
                         </li>
                         <li className="flex items-center gap-2 text-xs font-semibold text-gray-700">
-                          <span className="text-amber-500 font-bold shrink-0 text-sm">✓</span>
+                          <span className="text-emerald-500 font-bold shrink-0 text-sm">✓</span>
                           <span>Priority support & instant listing boost</span>
                         </li>
                       </motion.ul>
@@ -210,7 +210,7 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                   {selectedPlan === 'subscription' ? (
                     <button
                       onClick={handleSubscribeClick}
-                      className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs tracking-wider uppercase shadow-md shadow-amber-500/20 active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+                      className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-500 hover:from-emerald-600 hover:to-emerald-600 text-white font-black text-xs tracking-wider uppercase shadow-md shadow-emerald-500/20 active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                     >
                       Subscribe & Save
                       <ArrowRight size={14} />
@@ -221,7 +221,7 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                         onClose();
                         onProceedWithCommission();
                       }}
-                      className="w-full py-3.5 px-4 rounded-xl bg-[#003836] hover:bg-[#002523] text-white font-black text-xs tracking-wider uppercase shadow-md shadow-teal-900/10 active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
+                      className="w-full py-3.5 px-4 rounded-xl bg-[#2B2620] hover:bg-[#002523] text-white font-black text-xs tracking-wider uppercase shadow-md shadow-teal-900/10 active:scale-[0.97] transition-all flex items-center justify-center gap-1.5"
                     >
                       Select Commission
                     </button>
@@ -270,20 +270,20 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                       onClose();
                       onProceedWithCommission();
                     }}
-                    className="w-full py-3.5 px-4 rounded-xl border-2 border-gray-200 hover:border-[#003836] text-[#003836] font-black text-xs tracking-wider uppercase hover:bg-gray-50 active:scale-95 transition-all mt-auto flex items-center justify-center"
+                    className="w-full py-3.5 px-4 rounded-xl border-2 border-gray-200 hover:border-[#2B2620] text-[#2B2620] font-black text-xs tracking-wider uppercase hover:bg-gray-50 active:scale-95 transition-all mt-auto flex items-center justify-center"
                   >
                     Select Commission
                   </button>
                 </div>
 
                 {/* Desktop Plan B: Subscription */}
-                <div className="border-2 border-amber-400 rounded-[1.5rem] p-6 flex flex-col justify-between hover:shadow-[0_12px_40px_rgba(245,158,11,0.12)] transition-all duration-300 bg-gradient-to-b from-amber-50/20 to-white relative overflow-hidden">
-                  <div className="absolute top-0 right-0 bg-gradient-to-r from-amber-500 to-orange-500 text-white text-[8px] font-black px-3.5 py-1.5 rounded-bl-xl shadow-sm tracking-wider uppercase">
+                <div className="border-2 border-emerald-400 rounded-[1.5rem] p-6 flex flex-col justify-between hover:shadow-[0_12px_40px_rgba(184,137,60,0.12)] transition-all duration-300 bg-gradient-to-b from-emerald-50/20 to-white relative overflow-hidden">
+                  <div className="absolute top-0 right-0 bg-gradient-to-r from-emerald-500 to-emerald-500 text-white text-[8px] font-black px-3.5 py-1.5 rounded-bl-xl shadow-sm tracking-wider uppercase">
                     RECOMMENDED
                   </div>
 
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 flex items-center justify-center text-white mb-5 border border-amber-400 shadow-md shadow-amber-500/25">
+                    <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-emerald-500 to-emerald-500 flex items-center justify-center text-white mb-5 border border-emerald-400 shadow-md shadow-emerald-500/25">
                       <Crown size={22} />
                     </div>
                     <h4 className="text-lg font-black text-gray-900 mb-1 flex items-center gap-1.5">
@@ -295,15 +295,15 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
                     
                     <ul className="space-y-3.5 mb-8">
                       <li className="flex items-start gap-2.5 text-xs font-semibold text-gray-700 leading-tight">
-                        <span className="text-amber-500 font-bold shrink-0 text-sm">✓</span>
+                        <span className="text-emerald-500 font-bold shrink-0 text-sm">✓</span>
                         <span><strong className="text-gray-900">0% Commission</strong> on all bookings</span>
                       </li>
                       <li className="flex items-start gap-2.5 text-xs font-semibold text-gray-700 leading-tight">
-                        <span className="text-amber-500 font-bold shrink-0 text-sm">✓</span>
+                        <span className="text-emerald-500 font-bold shrink-0 text-sm">✓</span>
                         <span><strong className="text-gray-900">Verified Badge</strong> on your listing</span>
                       </li>
                       <li className="flex items-start gap-2.5 text-xs font-semibold text-gray-700 leading-tight">
-                        <span className="text-amber-500 font-bold shrink-0 text-sm">✓</span>
+                        <span className="text-emerald-500 font-bold shrink-0 text-sm">✓</span>
                         <span>Priority support & instant listing boost</span>
                       </li>
                     </ul>
@@ -311,7 +311,7 @@ const SubscriptionOnboardingModal = ({ isOpen, onClose, onProceedWithCommission,
 
                   <button
                     onClick={handleSubscribeClick}
-                    className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs tracking-wider uppercase shadow-md shadow-amber-500/25 active:scale-95 transition-all mt-auto flex items-center justify-center gap-1.5"
+                    className="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-500 hover:from-emerald-600 hover:to-emerald-600 text-white font-black text-xs tracking-wider uppercase shadow-md shadow-emerald-500/25 active:scale-95 transition-all mt-auto flex items-center justify-center gap-1.5"
                   >
                     Subscribe & Save
                     <ArrowRight size={14} />

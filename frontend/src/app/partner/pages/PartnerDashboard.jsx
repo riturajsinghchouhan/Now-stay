@@ -40,7 +40,7 @@ const PartnerDashboard = () => {
     if (loading) {
         return (
             <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-                <div className="w-10 h-10 border-4 border-[#0F172A] border-t-transparent rounded-full animate-spin"></div>
+                <div className="w-10 h-10 border-4 border-[#2B2620] border-t-transparent rounded-full animate-spin"></div>
             </div>
         );
     }
@@ -53,7 +53,7 @@ const PartnerDashboard = () => {
                 {/* Header & Greeting */}
                 <div className="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
                     <div>
-                        <h1 className="text-2xl font-black text-[#003836]">
+                        <h1 className="text-2xl font-black text-[#2B2620]">
                             Welcome back, {user?.name?.split(' ')[0] || 'Partner'}! 👋
                         </h1>
                         <p className="text-gray-500 mt-1 text-sm font-medium">
@@ -67,7 +67,7 @@ const PartnerDashboard = () => {
                         <div className="flex items-center gap-3">
                             <button
                                 onClick={refreshDashboard}
-                                className="p-2.5 rounded-xl bg-white border border-gray-200 text-gray-500 hover:text-[#003836] hover:border-[#003836] transition-all shadow-sm active:scale-95"
+                                className="p-2.5 rounded-xl bg-white border border-gray-200 text-gray-500 hover:text-[#2B2620] hover:border-[#2B2620] transition-all shadow-sm active:scale-95"
                                 title="Refresh Dashboard"
                             >
                                 <RotateCw size={18} className={loading ? 'animate-spin' : ''} />
@@ -78,7 +78,7 @@ const PartnerDashboard = () => {
                                     clearPropertyDrafts();
                                     navigate('/hotel/join');
                                 }}
-                                className="flex items-center gap-2 bg-[#0F172A] hover:bg-[#003836] text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95"
+                                className="flex items-center gap-2 bg-[#2B2620] hover:bg-[#2B2620] text-white px-5 py-2.5 rounded-xl font-bold transition-all shadow-md active:scale-95"
                             >
                                 <Plus size={18} />
                                 Add Property

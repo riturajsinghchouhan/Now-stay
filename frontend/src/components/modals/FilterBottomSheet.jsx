@@ -107,7 +107,7 @@ const FilterBottomSheet = ({
                             </div>
                             <button
                                 onClick={() => { setSelectedFilters([]); setHighRated(false); setPriceRange([MIN_PRICE, MAX_PRICE]); }}
-                                className="text-blue-600 font-medium text-sm"
+                                className="text-emerald-600 font-medium text-sm"
                             >
                                 Clear all
                             </button>
@@ -133,7 +133,7 @@ const FilterBottomSheet = ({
                                         </button>
                                     ))}
                                 </div>
-                                <button className="text-blue-600 font-medium text-sm mt-3">Show more</button>
+                                <button className="text-emerald-600 font-medium text-sm mt-3">Show more</button>
                             </section>
 
                             <hr className="border-gray-100" />

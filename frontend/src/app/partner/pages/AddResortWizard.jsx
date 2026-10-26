@@ -1249,7 +1249,7 @@ const AddResortWizard = () => {
                             onClick={() => updatePropertyForm('starRating', star)}
                             className={`px-3 py-2 rounded-xl text-xs font-bold transition-all border ${
                               Number(propertyForm.starRating) === star
-                                ? 'bg-[#0F172A] text-white border-[#0F172A] shadow-sm scale-105'
+                                ? 'bg-[#2B2620] text-white border-[#2B2620] shadow-sm scale-105'
                                 : 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100'
                             }`}
                           >
@@ -1357,7 +1357,7 @@ const AddResortWizard = () => {
                   <button
                     type="button"
                     onClick={searchLocationForAddress}
-                    className="px-4 py-2 bg-[#0F172A] text-white rounded-xl font-bold text-sm hover:bg-[#003d3b] transition-colors"
+                    className="px-4 py-2 bg-[#2B2620] text-white rounded-xl font-bold text-sm hover:bg-[#3F422C] transition-colors"
                   >
                     Search
                   </button>
@@ -1397,7 +1397,7 @@ const AddResortWizard = () => {
                 type="button"
                 onClick={useCurrentLocation}
                 disabled={loadingLocation}
-                className="w-full py-4 rounded-xl border border-dashed border-[#0F172A] text-[#0F172A] bg-[#0F172A]/5 font-bold flex items-center justify-center gap-2 hover:bg-[#0F172A]/10 transition-colors disabled:opacity-50"
+                className="w-full py-4 rounded-xl border border-dashed border-[#2B2620] text-[#2B2620] bg-[#2B2620]/5 font-bold flex items-center justify-center gap-2 hover:bg-[#2B2620]/10 transition-colors disabled:opacity-50"
               >
                 {loadingLocation ? (
                   <>
@@ -1882,7 +1882,7 @@ const AddResortWizard = () => {
                     <div className="relative">
                       <input
                         type="time"
-                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#004F4D] focus:ring-2 focus:ring-[#004F4D]/10 transition-all ${propertyForm.checkInTime ? 'text-[#003836]' : 'text-transparent'}`}
+                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#4F5338] focus:ring-2 focus:ring-[#4F5338]/10 transition-all ${propertyForm.checkInTime ? 'text-[#2B2620]' : 'text-transparent'}`}
                         value={propertyForm.checkInTime}
                         onChange={e => updatePropertyForm('checkInTime', e.target.value)}
                         onClick={(e) => e.target.showPicker?.()}
@@ -1896,7 +1896,7 @@ const AddResortWizard = () => {
                     <div className="relative">
                       <input
                         type="time"
-                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#004F4D] focus:ring-2 focus:ring-[#004F4D]/10 transition-all ${propertyForm.checkOutTime ? 'text-[#003836]' : 'text-transparent'}`}
+                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 border-gray-300 outline-none text-sm font-medium bg-white focus:border-[#4F5338] focus:ring-2 focus:ring-[#4F5338]/10 transition-all ${propertyForm.checkOutTime ? 'text-[#2B2620]' : 'text-transparent'}`}
                         value={propertyForm.checkOutTime}
                         onChange={e => updatePropertyForm('checkOutTime', e.target.value)}
                         onClick={(e) => e.target.showPicker?.()}
