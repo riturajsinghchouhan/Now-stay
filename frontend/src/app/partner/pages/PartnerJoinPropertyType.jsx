@@ -194,7 +194,7 @@ const PartnerJoinPropertyType = () => {
             }) : (
               <div className="col-span-1 sm:col-span-2 py-10 text-center">
                 <p className="text-gray-400 text-sm font-bold uppercase tracking-widest">No property types selected in your profile.</p>
-                <button onClick={() => navigate('/hotel/dashboard')} className="mt-4 px-6 py-2 bg-[#0F172A] text-white text-xs font-bold uppercase tracking-widest rounded-full">Go to Profile</button>
+                <button onClick={() => navigate('/hotel/dashboard')} className="mt-4 px-6 py-2 bg-[#2B2620] text-white text-xs font-bold uppercase tracking-widest rounded-full">Go to Profile</button>
               </div>
             )}
           </div>

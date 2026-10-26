@@ -166,7 +166,7 @@ const ImageUploader = ({ label, value, onChange, placeholder = "Upload Image", o
           <div className="absolute inset-0 bg-black/25 flex items-center justify-center gap-3 transition-opacity">
             <button
               onClick={() => onView(imageUrl)}
-              className="p-2.5 bg-white/90 rounded-full text-[#0F172A] hover:bg-white transition-colors shadow-lg backdrop-blur-sm"
+              className="p-2.5 bg-white/90 rounded-full text-[#2B2620] hover:bg-white transition-colors shadow-lg backdrop-blur-sm"
               title="View Image"
               type="button"
             >
@@ -201,10 +201,10 @@ const ImageUploader = ({ label, value, onChange, placeholder = "Upload Image", o
           />
           <div className={`
              border-2 border-dashed rounded-xl p-4 flex flex-col items-center justify-center gap-2 transition-colors
-             ${error ? 'border-red-300 bg-red-50' : 'border-gray-300 hover:border-[#0F172A] hover:bg-[#0F172A]/5 bg-gray-50'}
+             ${error ? 'border-red-300 bg-red-50' : 'border-gray-300 hover:border-[#2B2620] hover:bg-[#2B2620]/5 bg-gray-50'}
           `}>
             {uploading ? (
-              <Loader2 size={24} className="text-[#0F172A] animate-spin" />
+              <Loader2 size={24} className="text-[#2B2620] animate-spin" />
             ) : (
               <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm text-gray-400">
                 <Upload size={16} />
@@ -294,12 +294,12 @@ const StepOwnerDetails = () => {
       </AnimatePresence>
       {/* Aadhaar Section */}
       <div className="space-y-4 pt-2">
-        <h3 className="text-sm font-black text-[#003836]">Aadhaar Verification</h3>
+        <h3 className="text-sm font-black text-[#2B2620]">Aadhaar Verification</h3>
 
         <div>
           <label className="block text-xs font-bold text-gray-500 mb-1">Aadhaar Number</label>
           <input
-            className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0F172A] tracking-widest font-mono"
+            className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2B2620] tracking-widest font-mono"
             placeholder="XXXX XXXX XXXX"
             maxLength={12}
             onFocus={handleFocus}
@@ -328,13 +328,13 @@ const StepOwnerDetails = () => {
 
       {/* PAN Section */}
       <div className="space-y-4 pt-2 border-t border-gray-100">
-        <h3 className="text-sm font-black text-[#003836]">PAN Verification</h3>
+        <h3 className="text-sm font-black text-[#2B2620]">PAN Verification</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-bold text-gray-500 mb-1">PAN Number</label>
             <input
-              className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm uppercase focus:outline-none focus:ring-2 focus:ring-[#0F172A] font-mono"
+              className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm uppercase focus:outline-none focus:ring-2 focus:ring-[#2B2620] font-mono"
               placeholder="ABCDE1234F"
               maxLength={10}
               onFocus={handleFocus}

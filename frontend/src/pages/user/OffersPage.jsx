@@ -13,10 +13,10 @@ const OffersPage = () => {
 
     const colors = [
         "bg-red-50 border-red-200 text-red-600",
-        "bg-blue-50 border-blue-200 text-blue-600",
+        "bg-emerald-50 border-emerald-200 text-emerald-600",
         "bg-green-50 border-green-200 text-green-600",
-        "bg-orange-50 border-orange-200 text-orange-600",
-        "bg-purple-50 border-purple-200 text-purple-600",
+        "bg-emerald-50 border-emerald-200 text-emerald-600",
+        "bg-emerald-50 border-emerald-200 text-emerald-600",
         "bg-teal-50 border-teal-200 text-teal-600"
     ];
 

@@ -97,15 +97,15 @@ const BookingsPage = () => {
                 return <span className={`bg-green-100 text-green-700 ${baseClass}`}><CheckCircle size={9} className="shrink-0" /> Paid</span>;
             }
             if (paymentStatus === 'partial') {
-                return <span className={`bg-orange-100 text-orange-700 ${baseClass}`}><CheckCircle size={9} className="shrink-0" /> Partially Paid</span>;
+                return <span className={`bg-emerald-100 text-emerald-700 ${baseClass}`}><CheckCircle size={9} className="shrink-0" /> Partially Paid</span>;
             }
-            return <span className={`bg-yellow-100 text-yellow-700 ${baseClass}`}><AlertCircle size={9} className="shrink-0" /> Pay at Hotel</span>;
+            return <span className={`bg-emerald-100 text-emerald-700 ${baseClass}`}><AlertCircle size={9} className="shrink-0" /> Pay at Hotel</span>;
         }
         if (s === 'pending_payment') {
-            return <span className={`bg-orange-100 text-orange-700 ${baseClass}`}><Clock size={9} className="shrink-0" /> Payment Pending</span>;
+            return <span className={`bg-emerald-100 text-emerald-700 ${baseClass}`}><Clock size={9} className="shrink-0" /> Payment Pending</span>;
         }
         if (s === 'checked_in') {
-            return <span className={`bg-blue-100 text-blue-700 ${baseClass}`}><Clock size={9} className="shrink-0" /> Ongoing</span>;
+            return <span className={`bg-emerald-100 text-emerald-700 ${baseClass}`}><Clock size={9} className="shrink-0" /> Ongoing</span>;
         }
         if (s === 'completed' || s === 'checked_out') {
             return <span className={`bg-gray-100 text-gray-700 ${baseClass}`}><CheckCircle size={9} className="shrink-0" /> Completed</span>;
@@ -117,7 +117,7 @@ const BookingsPage = () => {
     };
 
     return (
-        <div className="min-h-screen bg-emerald-100">
+        <div className="min-h-screen bg-background">
             {/* Header with Tabs */}
             <div className="sticky top-0 bg-surface text-white px-5 pt-10 pb-6 rounded-b-3xl shadow-lg shadow-surface/20 z-10">
                 <div className="flex justify-between items-center mb-6">
@@ -279,7 +279,7 @@ const BookingsPage = () => {
                                                     ₹{booking.totalAmount?.toLocaleString()}
                                                 </p>
                                                 {(booking.paymentMethod === 'prepaid' && booking.remainingAmount > 0) && (
-                                                    <p className="text-[9px] font-bold text-orange-600 mt-0.5">
+                                                    <p className="text-[9px] font-bold text-emerald-600 mt-0.5">
                                                         To Pay at Hotel: ₹{booking.remainingAmount?.toLocaleString()}
                                                     </p>
                                                 )}
@@ -351,7 +351,7 @@ const BookingsPage = () => {
                                         >
                                             <Star
                                                 size={36}
-                                                className={`${reviewData.rating >= star ? 'fill-yellow-400 text-yellow-400' : 'text-gray-200'} transition-colors`}
+                                                className={`${reviewData.rating >= star ? 'fill-yellow-400 text-emerald-400' : 'text-gray-200'} transition-colors`}
                                             />
                                         </button>
                                     ))}

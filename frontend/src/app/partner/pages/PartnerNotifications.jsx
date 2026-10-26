@@ -25,14 +25,14 @@ const NotificationItem = ({ notif }) => {
             </div>
             <div className="flex-1">
                 <div className="flex justify-between items-start mb-1">
-                    <h4 className={`text-sm font-bold ${notif.read ? 'text-gray-700' : 'text-[#003836]'}`}>{notif.title}</h4>
+                    <h4 className={`text-sm font-bold ${notif.read ? 'text-gray-700' : 'text-[#2B2620]'}`}>{notif.title}</h4>
                     <span className="text-[10px] font-medium text-gray-400">{notif.time}</span>
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed mb-2">
                     {notif.desc}
                 </p>
                 {!notif.read && (
-                    <button className="text-[10px] font-bold text-[#0F172A] border-b border-[#0F172A]/20 hover:border-[#0F172A] transition-colors">Mark as Read</button>
+                    <button className="text-[10px] font-bold text-[#2B2620] border-b border-[#2B2620]/20 hover:border-[#2B2620] transition-colors">Mark as Read</button>
                 )}
             </div>
             {!notif.read && (
@@ -67,8 +67,8 @@ const PartnerNotifications = () => {
 
             <main className="max-w-3xl mx-auto px-4 pt-6">
                 <div className="flex justify-between items-center mb-6">
-                    <h3 className="font-black text-[#003836] text-lg">Recent</h3>
-                    <button className="text-xs font-bold text-gray-400 hover:text-[#0F172A] transition-colors">Mark all read</button>
+                    <h3 className="font-black text-[#2B2620] text-lg">Recent</h3>
+                    <button className="text-xs font-bold text-gray-400 hover:text-[#2B2620] transition-colors">Mark all read</button>
                 </div>
 
                 <div ref={listRef}>

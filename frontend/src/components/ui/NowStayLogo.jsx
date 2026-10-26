@@ -16,8 +16,8 @@ const NowStayLogo = ({ size = 'md', inverted = false }) => {
   };
 
   const { fontSize, dotIn, barWidth, barHeight, gap } = sizeMap[size] || sizeMap.md;
-  const nowColor = inverted ? '#ffffff' : '#0f2b3d';
-  const tealColor = '#009999';
+  const nowColor = inverted ? '#ffffff' : '#2B2620';
+  const tealColor = '#B8893C';
 
   return (
     <div style={{ display: 'inline-flex', flexDirection: 'column', alignItems: 'flex-start', gap }}>
@@ -25,10 +25,10 @@ const NowStayLogo = ({ size = 'md', inverted = false }) => {
         <span
           style={{
             fontSize,
-            fontWeight: 800,
-            fontFamily: "'Inter', 'Segoe UI', sans-serif",
+            fontWeight: 700,
+            fontFamily: "'Playfair Display', Georgia, serif",
             color: nowColor,
-            letterSpacing: '-0.5px',
+            letterSpacing: '0.5px',
           }}
         >
           NOW
@@ -36,10 +36,10 @@ const NowStayLogo = ({ size = 'md', inverted = false }) => {
         <span
           style={{
             fontSize,
-            fontWeight: 800,
-            fontFamily: "'Inter', 'Segoe UI', sans-serif",
+            fontWeight: 700,
+            fontFamily: "'Playfair Display', Georgia, serif",
             color: tealColor,
-            letterSpacing: '-0.5px',
+            letterSpacing: '0.5px',
           }}
         >
           STAY
@@ -48,7 +48,7 @@ const NowStayLogo = ({ size = 'md', inverted = false }) => {
           style={{
             fontSize: dotIn,
             fontWeight: 700,
-            fontFamily: "'Inter', 'Segoe UI', sans-serif",
+            fontFamily: "'Playfair Display', Georgia, serif",
             color: tealColor,
             letterSpacing: '0px',
           }}

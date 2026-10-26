@@ -62,7 +62,7 @@ const PaymentPage = () => {
         return (
             <div className="min-h-screen flex items-center justify-center bg-gray-50">
                 <div className="flex flex-col items-center">
-                    <Loader2 className="w-8 h-8 animate-spin mb-4 text-[#0F172A]" />
+                    <Loader2 className="w-8 h-8 animate-spin mb-4 text-[#2B2620]" />
                     <p className="text-gray-500 font-medium">Loading details...</p>
                 </div>
             </div>
@@ -163,7 +163,7 @@ const PaymentPage = () => {
                             className={`p-4 rounded-xl border flex items-center gap-4 cursor-pointer transition-all ${selectedMethod === 'razorpay' ? 'border-surface bg-surface/5 ring-1 ring-surface' : 'border-gray-200 bg-white'}`}
                         >
                             <div className="w-10 h-10 bg-white border border-gray-100 rounded-full flex items-center justify-center">
-                                <CreditCard size={20} className="text-blue-600" />
+                                <CreditCard size={20} className="text-emerald-600" />
                             </div>
                             <div className="flex-1">
                                 <h4 className="font-bold text-surface">Razorpay</h4>

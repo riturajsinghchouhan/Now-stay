@@ -97,7 +97,7 @@ const PartnerProperties = () => {
             <button
               onClick={fetchProperties}
               disabled={loading}
-              className="inline-flex items-center justify-center p-1.5 rounded-full bg-white border border-gray-200 text-gray-500 hover:text-[#0F172A] hover:border-[#0F172A] transition-all shadow-sm active:scale-95 disabled:opacity-50"
+              className="inline-flex items-center justify-center p-1.5 rounded-full bg-white border border-gray-200 text-gray-500 hover:text-[#2B2620] hover:border-[#2B2620] transition-all shadow-sm active:scale-95 disabled:opacity-50"
               title="Refresh Properties"
             >
               <RotateCw size={14} className={loading ? 'animate-spin' : ''} />
@@ -107,7 +107,7 @@ const PartnerProperties = () => {
                 clearPropertyDrafts();
                 navigate('/hotel/join');
               }}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#0F172A] text-white text-[11px] font-bold uppercase tracking-wide active:scale-95"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#2B2620] text-white text-[11px] font-bold uppercase tracking-wide active:scale-95"
             >
               <PlusCircle size={14} /> Add New
             </button>

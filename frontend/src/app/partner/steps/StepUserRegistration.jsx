@@ -52,7 +52,7 @@ const StepUserRegistration = () => {
       <div>
         <label className="block text-xs font-bold text-gray-500 mb-1">Full Name</label>
         <input
-          className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#0F172A]"
+          className="w-full border border-gray-200 rounded-xl px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#2B2620]"
           placeholder="Enter your full name"
           value={formData?.full_name || ''}
           onChange={e => handleChange('full_name', e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
@@ -67,7 +67,7 @@ const StepUserRegistration = () => {
               ? /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(formData.email)
                 ? 'border-green-500 ring-1 ring-green-500/20'
                 : 'border-red-500 ring-1 ring-red-500/20'
-              : 'border-gray-200 focus:ring-2 focus:ring-[#0F172A]'
+              : 'border-gray-200 focus:ring-2 focus:ring-[#2B2620]'
           }`}
           placeholder="name@example.com"
           value={formData?.email || ''}
@@ -79,7 +79,7 @@ const StepUserRegistration = () => {
       </div>
       <div>
         <label className="block text-xs font-bold text-gray-500 mb-1">Phone Number</label>
-        <div className="flex items-center border border-gray-200 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-[#0F172A] transition-all">
+        <div className="flex items-center border border-gray-200 rounded-xl overflow-hidden focus-within:ring-2 focus-within:ring-[#2B2620] transition-all">
           <div className="px-3 py-2.5 bg-gray-50 border-r border-gray-200 text-xs font-bold text-gray-500">
             +91
           </div>
@@ -100,12 +100,12 @@ const StepUserRegistration = () => {
         <input
           id="terms"
           type="checkbox"
-          className="mt-1 w-4 h-4 rounded border-gray-300 text-[#0F172A] focus:ring-[#0F172A]"
+          className="mt-1 w-4 h-4 rounded border-gray-300 text-[#2B2620] focus:ring-[#2B2620]"
           checked={formData?.termsAccepted || false}
           onChange={e => handleChange('termsAccepted', e.target.checked)}
         />
         <label htmlFor="terms" className="text-xs text-gray-500 leading-relaxed">
-          I agree to the <button type="button" onClick={() => openLegalModal('terms')} className="text-[#0F172A] font-bold hover:underline">Terms & Conditions</button> and <button type="button" onClick={() => openLegalModal('privacy')} className="text-[#0F172A] font-bold hover:underline">Privacy Policy</button> of NowStay Partner.
+          I agree to the <button type="button" onClick={() => openLegalModal('terms')} className="text-[#2B2620] font-bold hover:underline">Terms & Conditions</button> and <button type="button" onClick={() => openLegalModal('privacy')} className="text-[#2B2620] font-bold hover:underline">Privacy Policy</button> of NowStay Partner.
         </label>
       </div>
 
@@ -137,7 +137,7 @@ const StepUserRegistration = () => {
               {/* Header */}
               <div className="flex items-center justify-between px-8 py-4 border-b border-gray-50 shrink-0">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-2xl bg-[#0F172A] flex items-center justify-center text-white">
+                  <div className="w-10 h-10 rounded-2xl bg-[#2B2620] flex items-center justify-center text-white">
                     <FileText size={20} />
                   </div>
                   <h2 className="font-black text-gray-900 text-lg tracking-tight">
@@ -156,7 +156,7 @@ const StepUserRegistration = () => {
               <div className="overflow-y-auto flex-1 px-8 py-6 text-sm text-gray-600 leading-relaxed custom-scrollbar">
                 {legalLoading ? (
                   <div className="flex flex-col items-center justify-center py-20 gap-4">
-                    <div className="w-10 h-10 border-3 border-[#0F172A] border-t-transparent rounded-full animate-spin" />
+                    <div className="w-10 h-10 border-3 border-[#2B2620] border-t-transparent rounded-full animate-spin" />
                     <p className="text-gray-400 text-xs font-bold uppercase tracking-widest">Loading Content...</p>
                   </div>
                 ) : legalContent ? (
@@ -167,7 +167,7 @@ const StepUserRegistration = () => {
                 ) : (
                   <div className="text-center py-20">
                     <p className="text-gray-400 font-bold">Content not available.</p>
-                    <button onClick={() => setLegalModal(null)} className="mt-4 text-[#0F172A] font-black underline">Close</button>
+                    <button onClick={() => setLegalModal(null)} className="mt-4 text-[#2B2620] font-black underline">Close</button>
                   </div>
                 )}
               </div>
@@ -176,7 +176,7 @@ const StepUserRegistration = () => {
               <div className="px-8 py-6 border-t border-gray-50 shrink-0">
                 <button
                   onClick={() => { handleChange('termsAccepted', true); setLegalModal(null); }}
-                  className="w-full bg-[#0F172A] text-white font-black py-4.5 rounded-[1.5rem] shadow-xl shadow-[#0F172A]/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 tracking-wide"
+                  className="w-full bg-[#2B2620] text-white font-black py-4.5 rounded-[1.5rem] shadow-xl shadow-[#2B2620]/20 active:scale-[0.98] transition-all flex items-center justify-center gap-2 tracking-wide"
                 >
                   <CheckCircle size={20} />
                   I Agree & Accept

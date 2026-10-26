@@ -3,16 +3,16 @@ import HeroSection from '../../components/user/HeroSection';
 import ExclusiveOffers from '../../components/user/ExclusiveOffers';
 import PropertyTypeFilter from '../../components/user/PropertyTypeFilter';
 import PropertyFeed from '../../components/user/PropertyFeed';
+import FeaturedDestinations from '../../components/user/FeaturedDestinations';
 
 const Home = () => {
     const [selectedType, setSelectedType] = useState('All');
 
     return (
-        <main className="min-h-screen bg-emerald-100 pb-24">
+        <main className="min-h-screen bg-background pb-24">
             <HeroSection />
 
-            {/* Sticky Filter Bar */}
-            <div className="sticky top-0 z-30 bg-white/40 backdrop-blur-md pt-2">
+            <div className="mt-3">
                 <PropertyTypeFilter
                     selectedType={selectedType}
                     onSelectType={setSelectedType}
@@ -21,7 +21,10 @@ const Home = () => {
 
             <ExclusiveOffers />
 
-            <div className="mt-2 max-w-7xl mx-auto">
+            <FeaturedDestinations />
+
+            <div className="mt-5 max-w-7xl mx-auto">
+                <h2 className="font-serif text-xl font-semibold text-textDark px-5 mb-3">Inspired for you</h2>
                 <PropertyFeed selectedType={selectedType} />
             </div>
         </main>

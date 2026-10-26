@@ -1319,7 +1319,7 @@ const AddTentWizard = () => {
                   <button
                     type="button"
                     onClick={searchLocationForAddress}
-                    className="px-4 py-2 bg-[#0F172A] text-white rounded-xl font-bold text-sm hover:bg-[#003d3b] transition-colors"
+                    className="px-4 py-2 bg-[#2B2620] text-white rounded-xl font-bold text-sm hover:bg-[#3F422C] transition-colors"
                   >
                     Search
                   </button>
@@ -1359,7 +1359,7 @@ const AddTentWizard = () => {
                 type="button"
                 onClick={useCurrentLocation}
                 disabled={loadingLocation}
-                className="w-full py-4 rounded-xl border border-dashed border-[#0F172A] text-[#0F172A] bg-[#0F172A]/5 font-bold flex items-center justify-center gap-2 hover:bg-[#0F172A]/10 transition-colors disabled:opacity-50"
+                className="w-full py-4 rounded-xl border border-dashed border-[#2B2620] text-[#2B2620] bg-[#2B2620]/5 font-bold flex items-center justify-center gap-2 hover:bg-[#2B2620]/10 transition-colors disabled:opacity-50"
               >
                 {loadingLocation ? (
                   <>
@@ -1848,7 +1848,7 @@ const AddTentWizard = () => {
                     <div className="relative">
                       <input
                         type="time"
-                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 outline-none text-sm font-medium bg-white focus:border-[#004F4D] focus:ring-2 focus:ring-[#004F4D]/10 transition-all ${propertyForm.checkInTime ? 'text-[#003836]' : 'text-transparent'} ${!propertyForm.checkInTime && error ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300'}`}
+                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 outline-none text-sm font-medium bg-white focus:border-[#4F5338] focus:ring-2 focus:ring-[#4F5338]/10 transition-all ${propertyForm.checkInTime ? 'text-[#2B2620]' : 'text-transparent'} ${!propertyForm.checkInTime && error ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300'}`}
                         value={propertyForm.checkInTime}
                         onChange={e => updatePropertyForm('checkInTime', e.target.value)}
                         onClick={(e) => e.target.showPicker?.()}
@@ -1864,7 +1864,7 @@ const AddTentWizard = () => {
                     <div className="relative">
                       <input
                         type="time"
-                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 outline-none text-sm font-medium bg-white focus:border-[#004F4D] focus:ring-2 focus:ring-[#004F4D]/10 transition-all ${propertyForm.checkOutTime ? 'text-[#003836]' : 'text-transparent'} ${!propertyForm.checkOutTime && error ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300'}`}
+                        className={`w-full pl-8 pr-2 py-2 rounded-xl border-2 outline-none text-sm font-medium bg-white focus:border-[#4F5338] focus:ring-2 focus:ring-[#4F5338]/10 transition-all ${propertyForm.checkOutTime ? 'text-[#2B2620]' : 'text-transparent'} ${!propertyForm.checkOutTime && error ? 'border-red-400 ring-1 ring-red-400' : 'border-gray-300'}`}
                         value={propertyForm.checkOutTime}
                         onChange={e => updatePropertyForm('checkOutTime', e.target.value)}
                         onClick={(e) => e.target.showPicker?.()}

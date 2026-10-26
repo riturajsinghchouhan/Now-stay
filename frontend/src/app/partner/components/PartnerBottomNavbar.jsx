@@ -116,7 +116,7 @@ const PartnerBottomNavbar = () => {
               {isActive && (
                 <motion.div
                   layoutId="partner-active-pill"
-                  className="absolute inset-x-1 inset-y-0 bg-[#003836]/10 rounded-xl -z-10"
+                  className="absolute inset-x-1 inset-y-0 bg-[#2B2620]/10 rounded-xl -z-10"
                   initial={false}
                   transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 />
@@ -124,11 +124,11 @@ const PartnerBottomNavbar = () => {
 
               <Icon
                 size={22}
-                className={`transition-colors duration-200 ${isActive ? 'text-[#003836] fill-[#003836]/10' : 'text-gray-400'} ${!isApproved && (item.name === 'Properties' || item.name === 'Bookings' || item.name === 'Inventory') ? 'opacity-30 cursor-not-allowed' : ''}`}
+                className={`transition-colors duration-200 ${isActive ? 'text-[#2B2620] fill-[#2B2620]/10' : 'text-gray-400'} ${!isApproved && (item.name === 'Properties' || item.name === 'Bookings' || item.name === 'Inventory') ? 'opacity-30 cursor-not-allowed' : ''}`}
                 strokeWidth={isActive ? 2.5 : 2}
               />
 
-              <span className={`text-[9px] font-bold tracking-wide transition-colors duration-200 ${isActive ? 'text-[#003836]' : 'text-gray-400'} ${!isApproved && (item.name === 'Properties' || item.name === 'Bookings' || item.name === 'Inventory') ? 'opacity-30 cursor-not-allowed' : ''}`}>
+              <span className={`text-[9px] font-bold tracking-wide transition-colors duration-200 ${isActive ? 'text-[#2B2620]' : 'text-gray-400'} ${!isApproved && (item.name === 'Properties' || item.name === 'Bookings' || item.name === 'Inventory') ? 'opacity-30 cursor-not-allowed' : ''}`}>
                 {item.name}
               </span>
             </button>

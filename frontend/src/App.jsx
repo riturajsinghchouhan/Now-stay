@@ -204,7 +204,7 @@ const Layout = ({ children }) => {
   const showPartnerNavs = isPartnerContext && !location.pathname.startsWith('/admin');
 
   // Specific user pages where BottomNav is hidden
-  const hideUserBottomNavOn = ['/booking-confirmation', '/payment', '/support', '/refer', '/hotel/', '/legal', '/terms', '/privacy', '/contact'];
+  const hideUserBottomNavOn = ['/booking-confirmation', '/booking/', '/payment', '/support', '/refer', '/hotel/', '/legal', '/terms', '/privacy', '/contact'];
   const showUserBottomNav = showUserNavs && !hideUserBottomNavOn.some(r => location.pathname.includes(r)) && !hideNavsDueToSlider;
 
   // Partner Bottom Nav should show in Partner App (authenticated pages)
@@ -226,7 +226,7 @@ const Layout = ({ children }) => {
 
       <div className={`min-h-screen md:pt-24 ${showUserBottomNav || showPartnerBottomNav ? 'pb-20 md:pb-0' : ''}`}>
         {showMaintenanceOverlay ? (
-          <div className="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center px-6 py-10 text-center bg-gradient-to-b from-[#111827] via-[#0f172a] to-black">
+          <div className="min-h-[calc(100vh-4rem)] flex flex-col items-center justify-center px-6 py-10 text-center bg-gradient-to-b from-[#2B2620] via-[#2B2620] to-black">
             <div className="flex flex-col items-center justify-center max-w-md w-full">
               <div className="mb-6 flex flex-col items-center justify-center gap-3">
                 <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center">

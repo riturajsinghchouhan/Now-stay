@@ -95,7 +95,7 @@ const HomeSearchModal = ({ isOpen, onClose }) => {
                         <div className="space-y-4 mt-2">
                             {/* Destination */}
                             <div className="relative">
-                                <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#10B981]">
+                                <div className="absolute left-3 top-1/2 -translate-y-1/2 text-[#B8893C]">
                                     <MapPin size={20} className="stroke-[2]" />
                                 </div>
                                 <input
@@ -117,7 +117,7 @@ const HomeSearchModal = ({ isOpen, onClose }) => {
                                 <div>
                                     <label className="text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1 block pl-1">Check-in</label>
                                     <div className="relative w-full px-3 py-3 bg-white border border-gray-100 rounded-2xl shadow-sm cursor-pointer flex items-center gap-2.5 hover:border-gray-200 transition-colors">
-                                        <Calendar size={18} className="text-[#10B981] shrink-0" />
+                                        <Calendar size={18} className="text-[#B8893C] shrink-0" />
                                         <span className={`text-sm ${dates.checkIn ? 'text-gray-800 font-bold' : 'text-gray-400 font-medium'}`}>
                                             {formatDisplayDate(dates.checkIn, "Select date")}
                                         </span>
@@ -142,7 +142,7 @@ const HomeSearchModal = ({ isOpen, onClose }) => {
                                 <div>
                                     <label className="text-[10px] uppercase font-bold text-gray-500 tracking-wider mb-1 block pl-1">Check-out</label>
                                     <div className="relative w-full px-3 py-3 bg-white border border-gray-100 rounded-2xl shadow-sm cursor-pointer flex items-center gap-2.5 hover:border-gray-200 transition-colors">
-                                        <Calendar size={18} className="text-[#10B981] shrink-0" />
+                                        <Calendar size={18} className="text-[#B8893C] shrink-0" />
                                         <span className={`text-sm ${dates.checkOut ? 'text-gray-800 font-bold' : 'text-gray-400 font-medium'}`}>
                                             {formatDisplayDate(dates.checkOut, "Select date")}
                                         </span>
@@ -210,21 +210,21 @@ const HomeSearchModal = ({ isOpen, onClose }) => {
                             {/* Pets Toggle */}
                             <div className="flex items-center justify-between bg-[#F1F5F9] rounded-2xl p-4 border border-[#e0f2f0]">
                                 <div className="flex items-center gap-2">
-                                    <div className="p-1.5 bg-[#F1F5F9] rounded-lg text-[#10B981]">
+                                    <div className="p-1.5 bg-[#F1F5F9] rounded-lg text-[#B8893C]">
                                         <PawPrint size={16} />
                                     </div>
-                                    <span className="text-[#0F172A] font-medium text-sm">Travelling with pets?</span>
+                                    <span className="text-[#2B2620] font-medium text-sm">Travelling with pets?</span>
                                 </div>
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input type="checkbox" value="" className="sr-only peer" checked={pets} onChange={() => setPets(!pets)} />
-                                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#10B981]"></div>
+                                    <div className="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#B8893C]"></div>
                                 </label>
                             </div>
 
                             {/* Search Button */}
                             <button
                                 onClick={handleSearch}
-                                className="w-full bg-[#10B981] text-white py-3.5 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-[#10B981]/20 active:scale-95 transition-transform mt-2"
+                                className="w-full bg-[#B8893C] text-white py-3.5 rounded-2xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-[#B8893C]/20 active:scale-95 transition-transform mt-2"
                             >
                                 <Search size={20} />
                                 Search Hotels

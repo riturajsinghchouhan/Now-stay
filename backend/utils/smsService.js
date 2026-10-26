@@ -143,6 +143,10 @@ class SMSService {
   }
 
   async sendOTP(phone, otp) {
+    if (process.env.DISABLE_SMS === 'true') {
+      console.log(`📵 [SMSService] DISABLE_SMS=true, skipping SMS to ${phone}`);
+      return { success: true, skipped: true };
+    }
     try {
       const activeProvider = await this.getActiveProvider();
       console.log(`📱 [SMSService] Using active SMS Provider: [${activeProvider}]`);

@@ -123,13 +123,13 @@ const PartnerBankDetails = () => {
   };
 
   if (loading) {
-    return <div className="min-h-screen bg-gray-50 flex items-center justify-center"><Loader2 className="animate-spin text-[#0F172A]" /></div>;
+    return <div className="min-h-screen bg-gray-50 flex items-center justify-center"><Loader2 className="animate-spin text-[#2B2620]" /></div>;
   }
 
   return (
     <div className="min-h-screen bg-gray-50 font-sans pb-20">
       {/* Header */}
-      <div className="bg-[#0F172A] text-white pt-8 pb-20 px-6 rounded-b-[40px] shadow-lg relative z-20">
+      <div className="bg-[#2B2620] text-white pt-8 pb-20 px-6 rounded-b-[40px] shadow-lg relative z-20">
         <div className="flex items-center gap-4 mb-6">
           <button onClick={() => window.history.length > 2 ? navigate(-1) : navigate('/hotel/dashboard')} className="p-2 bg-white/10 rounded-full hover:bg-white/20 transition-colors">
             <ArrowLeft size={20} />
@@ -151,12 +151,12 @@ const PartnerBankDetails = () => {
           {!isEditing && existingDetails && (
             <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-50">
               <div>
-                <h3 className="text-lg font-black text-[#003836]">Saved Account</h3>
+                <h3 className="text-lg font-black text-[#2B2620]">Saved Account</h3>
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Verified for Payouts</p>
               </div>
               <button
                 onClick={() => setIsEditing(true)}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 text-[#0F172A] rounded-lg text-xs font-bold hover:bg-gray-100 transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-gray-50 text-[#2B2620] rounded-lg text-xs font-bold hover:bg-gray-100 transition-colors"
               >
                 <Edit size={14} /> Edit
               </button>
@@ -167,7 +167,7 @@ const PartnerBankDetails = () => {
           {isEditing && (
             <div className="flex justify-between items-center mb-6 pb-4 border-b border-gray-50">
               <div>
-                <h3 className="text-lg font-black text-[#003836]">{existingDetails ? 'Edit Account' : 'Add Account'}</h3>
+                <h3 className="text-lg font-black text-[#2B2620]">{existingDetails ? 'Edit Account' : 'Add Account'}</h3>
                 <p className="text-[10px] text-gray-400 font-bold uppercase tracking-wider">Enter your official bank details</p>
               </div>
               {existingDetails && (
@@ -184,7 +184,7 @@ const PartnerBankDetails = () => {
           <div className="space-y-4">
             <div className="group">
               <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1.5 block">Account Holder</label>
-              <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#0F172A] focus-within:ring-2 focus-within:ring-[#0F172A]/10' : 'bg-gray-50/50 border-transparent'}`}>
+              <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#2B2620] focus-within:ring-2 focus-within:ring-[#2B2620]/10' : 'bg-gray-50/50 border-transparent'}`}>
                 <User size={18} className="text-gray-400" />
                 {isEditing ? (
                   <input
@@ -196,17 +196,17 @@ const PartnerBankDetails = () => {
                         const val = e.target.value.replace(/[^a-zA-Z\s]/g, '');
                         setDetails({ ...details, accountHolderName: val });
                     }}
-                    className="flex-1 bg-transparent text-sm font-bold text-[#003836] placeholder:text-gray-300 focus:outline-none"
+                    className="flex-1 bg-transparent text-sm font-bold text-[#2B2620] placeholder:text-gray-300 focus:outline-none"
                   />
                 ) : (
-                  <span className="text-sm font-bold text-[#003836]">{details.accountHolderName}</span>
+                  <span className="text-sm font-bold text-[#2B2620]">{details.accountHolderName}</span>
                 )}
               </div>
             </div>
 
             <div className="group">
               <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1.5 block">Account Number</label>
-              <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#0F172A] focus-within:ring-2 focus-within:ring-[#0F172A]/10' : 'bg-gray-50/50 border-transparent'} ${isEditing && details.accountNumber && !/^[0-9]{9,18}$/.test(details.accountNumber) ? 'border-red-300' : ''}`}>
+              <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#2B2620] focus-within:ring-2 focus-within:ring-[#2B2620]/10' : 'bg-gray-50/50 border-transparent'} ${isEditing && details.accountNumber && !/^[0-9]{9,18}$/.test(details.accountNumber) ? 'border-red-300' : ''}`}>
                 <CreditCard size={18} className="text-gray-400" />
                 {isEditing ? (
                   <input
@@ -219,10 +219,10 @@ const PartnerBankDetails = () => {
                         const val = e.target.value.replace(/\D/g, '');
                         setDetails({ ...details, accountNumber: val });
                     }}
-                    className="flex-1 bg-transparent text-sm font-bold text-[#003836] placeholder:text-gray-300 focus:outline-none"
+                    className="flex-1 bg-transparent text-sm font-bold text-[#2B2620] placeholder:text-gray-300 focus:outline-none"
                   />
                 ) : (
-                  <span className="text-sm font-bold text-[#003836]">
+                  <span className="text-sm font-bold text-[#2B2620]">
                     •••• •••• {details.accountNumber.slice(-4)}
                   </span>
                 )}
@@ -235,7 +235,7 @@ const PartnerBankDetails = () => {
             <div className="flex gap-4">
               <div className="group flex-1">
                 <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1.5 block">IFSC Code</label>
-                <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#0F172A] focus-within:ring-2 focus-within:ring-[#0F172A]/10' : 'bg-gray-50/50 border-transparent'} ${isEditing && details.ifscCode && !/^[A-Z]{4}0[A-Z0-9]{6}$/.test(details.ifscCode) ? 'border-red-300' : ''}`}>
+                <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#2B2620] focus-within:ring-2 focus-within:ring-[#2B2620]/10' : 'bg-gray-50/50 border-transparent'} ${isEditing && details.ifscCode && !/^[A-Z]{4}0[A-Z0-9]{6}$/.test(details.ifscCode) ? 'border-red-300' : ''}`}>
                   <Building2 size={18} className="text-gray-400" />
                   {isEditing ? (
                     <input
@@ -247,10 +247,10 @@ const PartnerBankDetails = () => {
                         const val = e.target.value.toUpperCase().replace(/[^A-Z0-9]/g, '');
                         setDetails({ ...details, ifscCode: val });
                       }}
-                      className="flex-1 bg-transparent text-sm font-bold text-[#003836] placeholder:text-gray-300 focus:outline-none"
+                      className="flex-1 bg-transparent text-sm font-bold text-[#2B2620] placeholder:text-gray-300 focus:outline-none"
                     />
                   ) : (
-                    <span className="text-sm font-bold text-[#003836]">{details.ifscCode}</span>
+                    <span className="text-sm font-bold text-[#2B2620]">{details.ifscCode}</span>
                   )}
                 </div>
                 {isEditing && details.ifscCode && details.ifscCode.length > 0 && !/^[A-Z]{4}0[A-Z0-9]{6}$/.test(details.ifscCode) && (
@@ -261,7 +261,7 @@ const PartnerBankDetails = () => {
 
             <div className="group">
               <label className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-1.5 block">Bank Name</label>
-              <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#0F172A] focus-within:ring-2 focus-within:ring-[#0F172A]/10' : 'bg-gray-50/50 border-transparent'}`}>
+              <div className={`flex items-center gap-3 p-3.5 rounded-xl border transition-all ${isEditing ? 'bg-gray-50 border-gray-200 focus-within:border-[#2B2620] focus-within:ring-2 focus-within:ring-[#2B2620]/10' : 'bg-gray-50/50 border-transparent'}`}>
                 <Landmark size={18} className="text-gray-400" />
                 {isEditing ? (
                   <input
@@ -273,10 +273,10 @@ const PartnerBankDetails = () => {
                         const val = e.target.value.replace(/[^a-zA-Z\s]/g, '');
                         setDetails({ ...details, bankName: val });
                     }}
-                    className="flex-1 bg-transparent text-sm font-bold text-[#003836] placeholder:text-gray-300 focus:outline-none"
+                    className="flex-1 bg-transparent text-sm font-bold text-[#2B2620] placeholder:text-gray-300 focus:outline-none"
                   />
                 ) : (
-                  <span className="text-sm font-bold text-[#003836]">{details.bankName}</span>
+                  <span className="text-sm font-bold text-[#2B2620]">{details.bankName}</span>
                 )}
               </div>
             </div>
@@ -288,7 +288,7 @@ const PartnerBankDetails = () => {
               <button
                 onClick={handleSave}
                 disabled={saving}
-                className="w-full py-3.5 rounded-xl bg-[#0F172A] text-white font-bold text-sm shadow-lg shadow-[#0F172A]/20 active:scale-95 transition-all flex items-center justify-center gap-2"
+                className="w-full py-3.5 rounded-xl bg-[#2B2620] text-white font-bold text-sm shadow-lg shadow-[#2B2620]/20 active:scale-95 transition-all flex items-center justify-center gap-2"
               >
                 {saving ? <Loader2 className="animate-spin" size={18} /> : <Save size={18} />}
                 Save Details
