@@ -1653,6 +1653,10 @@ const AddPGWizard = () => {
                         <label className="text-xs font-semibold text-gray-500">Max Adults</label>
                         <input className="input" type="number" placeholder="1" value={editingRoomType.maxAdults} onChange={e => setEditingRoomType({ ...editingRoomType, maxAdults: e.target.value.replace(/^0+(?!$)/, '') })} />
                       </div>
+                      <div className="space-y-1">
+                        <label className="text-xs font-semibold text-gray-500">Max Children</label>
+                        <input className="input" type="number" placeholder="0" value={editingRoomType.maxChildren} onChange={e => setEditingRoomType({ ...editingRoomType, maxChildren: e.target.value.replace(/^0+(?!$)/, '') })} />
+                      </div>
                     </div>
 
                     <div className="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100 space-y-3">
