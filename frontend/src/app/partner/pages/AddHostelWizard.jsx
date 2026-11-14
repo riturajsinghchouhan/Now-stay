@@ -1527,6 +1527,8 @@ const AddHostelWizard = () => {
                                 <div className="flex flex-wrap gap-2 mt-3">
                                   <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded flex items-center gap-1">Beds: {rt.bedsPerRoom}</span>
                                   <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded flex items-center gap-1">Inventory: {rt.totalInventory}</span>
+                                  <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded flex items-center gap-1">Max Adults: {rt.maxAdults}</span>
+                                  <span className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded flex items-center gap-1">Max Children: {rt.maxChildren || 0}</span>
                                 </div>
                               </div>
                             </div>
