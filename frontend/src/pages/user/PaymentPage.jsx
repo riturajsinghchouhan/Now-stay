@@ -4,6 +4,7 @@ import { ArrowLeft, CreditCard, ShieldCheck, Tag, TrendingDown, Loader2 } from '
 import RazorpayButton from '../../components/payment/RazorpayButton';
 import { toast } from 'react-hot-toast';
 import { bookingService } from '../../services/apiService';
+import { clearBookingDrafts } from '../../utils/localStorageUtils';
 
 const PaymentPage = () => {
     const navigate = useNavigate();
@@ -75,7 +76,9 @@ const PaymentPage = () => {
 
     const handlePaymentSuccess = (response) => {
         console.log('Payment successful:', response);
+        clearBookingDrafts();
         navigate('/booking-confirmation', {
+            replace: true,
             state: {
                 paid: true,
                 booking: response.booking,

@@ -8,6 +8,7 @@ import toast from 'react-hot-toast';
 import { bookingService, legalService, userService } from '../../services/apiService';
 import paymentService from '../../services/paymentService';
 import walletService from '../../services/walletService';
+import { clearBookingDrafts } from '../../utils/localStorageUtils';
 
 
 // Simple Markdown to HTML converter
@@ -106,10 +107,7 @@ const BookingCheckoutPage = () => {
 
   // Cleanup helper to remove booking data from sessionStorage after success
   const clearBookingData = () => {
-    sessionStorage.removeItem('pendingBooking');
-    if (property?._id) {
-      sessionStorage.removeItem(`property_draft_${property._id}`);
-    }
+    clearBookingDrafts();
   };
   const [errors, setErrors] = useState({});
 

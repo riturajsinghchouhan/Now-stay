@@ -21,3 +21,19 @@ export const clearPropertyDrafts = () => {
         }
     });
 };
+
+/**
+ * Clears booking selections (search dates/guests, property drafts, pending checkout)
+ * from sessionStorage so a completed booking doesn't prefill the next search.
+ */
+export const clearBookingDrafts = () => {
+    try {
+        Object.keys(sessionStorage).forEach(key => {
+            if (key.startsWith('property_draft_') || key === 'pendingBooking' || key === 'homeSearchData') {
+                sessionStorage.removeItem(key);
+            }
+        });
+    } catch (e) {
+        console.error('Failed to clear booking drafts', e);
+    }
+};
